@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Montserrat&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+body {
+	font-family: Montserrat, sans-serif;
+	background-color: #f3dbc757;
+	color: #24857c;
+}
+
+.navbar {
+	background-color: #ddf1ef;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: #24857c;
+}
+
+#logo {
+	color: #24857c;
+	font-family: Cookie, sans-serif;
+	font-size: 2.5rem;
+}
+
+footer {
+	background-color: #24857c;
+}
+
+.socialmedia-links li {
+	list-style: none;
+	display: inline-block;
+}
+
+footer i {
+	transition: color .15s ease-in-out;
+}
+
+footer i:hover {
+	color: #e7c06a;
+}
