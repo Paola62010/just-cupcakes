@@ -50,7 +50,8 @@ footer i:hover {
 }
 
 .search-button,
-.bag-button {
+.bag-button,
+.sitebutton {
 	background-color: #ddf1ef;
 	color: #24857c;
 	border: 1px solid #24857c;
@@ -63,7 +64,13 @@ footer i:hover {
 }
 
 .search-button:hover,
-.bag-button:hover {
+.bag-button:hover,
+.sitebutton:hover {
 	color: white;
 	background-color: #24857c;
+}
+
+.delivery-info {
+	background-color: #ddf1ef;
+	border: none;
 }

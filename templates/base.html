@@ -27,16 +27,25 @@
                         <li class="nav-item">
                             <a href="{% url 'home' %}" class="nav-link">HOME</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">ABOUT</a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     SHOP
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="shopDropdown">
                               <li>
-                                <a class="dropdown-item" href="#">OUR FLAVOURS</a>
+                                <a class="dropdown-item" href="#">CLASSIC FLAVOURS</a>
                               </li>
                               <li>
                                 <a class="dropdown-item" href="#">LIMITED EDITIONS</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">MONTHLY CUPCAKE</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">ALL CUPCAKES</a>
                               </li>
                             </ul>
                         </li>
@@ -56,7 +65,7 @@
                         </li>
                         {% if user.is_superuser%}
                         <li class="nav-item">
-                            <a href="#" class="nav-link">PRODUCT MANAGEMENT</a>
+                            <a href="#" class="nav-link">MANAGEMENT</a>
                         </li>
                         {% endif %}
                         {% else %}
@@ -75,11 +84,10 @@
                         </li>
                         {% endif %}
                     </ul>
-                    <div>
-                        <button class="btn bag-button">
-                            <a href="#"><i class="bi bi-cart-fill"></i> € 0.00</a>
-                        </button>
-                    </div>
+                    <form class="d-flex" action="#" method="get">
+                        <input name="q" class="form-control me-2" type="search" placeholder="Search ..." aria-label="Search" required>
+                        <button class="btn search-button" type="submit">Search</button>
+                    </form>
                 </div>
             </div>
         </nav>

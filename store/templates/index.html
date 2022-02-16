@@ -1,14 +1,59 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 <main>
     <section>
-        <div class="container py-3">
-            <div class="col-lg-6 col-md-8 mx-auto">
-                <form class="d-flex" action="#" method="get">
-                    <input name="q" class="form-control me-2" type="search" placeholder="Search ..." aria-label="Search" required>
-                    <button class="btn search-button" type="submit">Search</button>
-                </form>
+        <div class="container py-3 text-end">
+            <div>
+                <button class="btn bag-button">
+                    <a href="#"><i class="bi bi-cart-fill"></i> € 0.00</a>
+                </button>
+            </div>
+        </div>
+        <div class="container px-4 px-lg-5">
+            <!-- Heading Row-->
+            <div class="row gx-4 gx-lg-5 align-items-center my-5">
+                <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'main-bg.jpg' %}" alt="Cupcakes"></div>
+                <div class="col-lg-5">
+                    <h1 class="font-weight-light">Welcome to our store!</h1>
+                    <p>Just Cupcakes is a well established bakery based in Dublin. We specialize in delicious cupcakes, made fresh daily. We bake our products from scratch and use only the finest and preservative-free ingredients, offering our customers fresh batches of yummy goodness every day!</p>
+                    <a class="btn sitebutton" href="#">Shop now!</a>
+                </div>
+            </div>
+            <!-- Call to Action-->
+            <div class="card my-5 py-4 text-center delivery-info">
+                <div class="card-body"><p class="m-0">Freshly made cupcakes every day. Free delivery on any orders above €50. Place an order with us today!</p></div>
+            </div>
+            <!-- Content Row-->
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-md-4 mb-5">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h2 class="card-title">Purchase online</h2>
+                            <p class="card-text">All our cupcakes are available to purchase online in boxes of 12. Whether you are celebrating a birthday, sending them as a present or sharing them at the office, our cupcakes are a perfect treat that will put a smile on your face. Check out our flavours!</p>
+                        </div>
+                        <div class="card-footer"><a class="btn sitebutton px-4" href="#!">Go</a></div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h2 class="card-title">Fast checkout</h2>
+                            <p class="card-text">Why not creating an account with us? You can add your payment and shipping information for a fast checkout experience. Register for your account today!</p>
+                        </div>
+                        <div class="card-footer"><a class="btn sitebutton px-4" href="#!">Go</a></div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h2 class="card-title">New flavours</h2>
+                            <p class="card-text">We are constantly adding new delicious flavours and we have a new cupcake coming out every month, check out our cupcake of the month!</p>
+                        </div>
+                        <div class="card-footer"><a class="btn sitebutton px-4" href="#!">Go</a></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
