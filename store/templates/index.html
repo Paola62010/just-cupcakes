@@ -4,7 +4,7 @@
 {% block content %}
 <main>
     <section>
-        <div class="container py-3 text-end">
+        <div class="container px-4 mt-4 text-end">
             <div>
                 <button class="btn bag-button">
                     <a href="#"><i class="bi bi-cart-fill"></i> € 0.00</a>
@@ -40,9 +40,13 @@
                     <div class="card h-100">
                         <div class="card-body">
                             <h2 class="card-title">Fast checkout</h2>
-                            <p class="card-text">Why not creating an account with us? You can add your payment and shipping information for a fast checkout experience. Register for your account today!</p>
+                            <p class="card-text">Update your payment and shipping information in your profile for a fast checkout experience. Don't have an account yet? Register with us today!</p>
                         </div>
-                        <div class="card-footer"><a class="btn sitebutton px-4" href="#!">Go</a></div>
+                        {% if user.is_authenticated %}
+                        <div class="card-footer"><a class="btn sitebutton px-4" href="#">Go</a></div>
+                        {% else %}
+                        <div class="card-footer"><a class="btn sitebutton px-4" href="{% url 'account_signup' %}">Go</a></div>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="col-md-4 mb-5">
