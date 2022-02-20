@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<main>
+    <section>
+        <div class="container px-4 mt-4 d-flex justify-content-end align-items-baseline">
+            {% if user.is_authenticated %}
+            <p class="me-3">Hi <strong>{{user.username}}</strong>!</p>
+            {% endif %}
+            <div>
+                <button class="btn bag-button">
+                    <a href="#"><i class="bi bi-cart-fill"></i> € 0.00</a>
+                </button>
+            </div>
+        </div>
+        <div class="py-md-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="row gx-4 gx-lg-5 align-items-center">
+                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0 detail-image" src="{{ product.image.url }}" alt="{{product.name}} cupcake image" /></div>
+                <div class="col-md-6">
+                    {% if user.is_superuser%}
+                    <!--Edit and delete buttons for superuser-->
+                    <div class="d-flex justify-content-end align-items-center">
+                        <button type="button" class="btn sitebutton me-3">Edit</button>
+                        <button type="button" class="btn sitebutton me-3">Delete</button>
+                    </div>
+                    {% endif %}
+                    <div class="small mb-1">SKU: {{product.sku}}</div>
+                    <h1 class="display-5">{{product.name}} {% if product.popular %}<span class="pop-detail">(Popular)</span>{% endif %}</h1>
+                    <div class="fs-5 mb-5">
+                        <span>€ {{product.price}}</span>
+                    </div>
+                    <p class="mb-4">{{product.description}}</p>
+                    <div class="d-flex">
+                        <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+                        <button class="btn sitebutton flex-shrink-0" type="button">
+                            <i class="bi-cart-fill me-1"></i>
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+</main>
+
+{% endblock %}

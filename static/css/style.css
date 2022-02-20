@@ -106,10 +106,16 @@ footer i:hover {
 	background-color: #ddf1ef;
 }
 
-.card-img-top {
+.card-image {
 	width: 100%;
 	object-fit: cover;
 	height: 300px;
+}
+
+.detail-image {
+	width: 100%;
+	object-fit: cover;
+	height: 500px;
 }
 
 .product-card a {
@@ -134,4 +140,16 @@ footer i:hover {
 	padding: 0.3rem;
 	border-radius: 0.25rem;
 	border: 1px solid #f1b124;
+}
+
+.pop-detail {
+	color: #f1b124;
+	font-family: Montserrat, sans-serif;
+	font-size: 1rem;
+}
+
+@media only screen and (max-width: 576px) {
+	.detail-image {
+		height: 300px;
+	}
 }
