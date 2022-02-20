@@ -45,7 +45,7 @@
                                 <a class="dropdown-item" href="#">MONTHLY CUPCAKE</a>
                               </li>
                               <li>
-                                <a class="dropdown-item" href="#">ALL CUPCAKES</a>
+                                <a class="dropdown-item" href="{% url 'products' %}">ALL CUPCAKES</a>
                               </li>
                             </ul>
                         </li>
@@ -63,7 +63,7 @@
                               </li>
                             </ul>
                         </li>
-                        {% if user.is_superuser%}
+                        {% if user.is_superuser %}
                         <li class="nav-item">
                             <a href="#" class="nav-link">MANAGEMENT</a>
                         </li>

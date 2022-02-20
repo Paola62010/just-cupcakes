@@ -14,6 +14,11 @@ main {
 	flex: 1;
 }
 
+h1 {
+	font-family: Cookie, sans-serif;
+	font-size: 2.5rem;
+}
+
 a {
 	text-decoration: none;
 }
@@ -50,7 +55,7 @@ footer i {
 }
 
 footer i:hover {
-	color: #e7c06a;
+	color: #f1b124;
 }
 
 .search-button,
@@ -95,4 +100,38 @@ footer i:hover {
 .cupcake-icon {
 	width: 50px;
 	height: 50px;
+}
+
+.action-cards-footer {
+	background-color: #ddf1ef;
+}
+
+.card-img-top {
+	width: 100%;
+	object-fit: cover;
+	height: 300px;
+}
+
+.product-card a {
+	font-family: inherit;
+	color: inherit;
+}
+
+.product-card-body {
+	transition: background-color .15s ease-in-out;
+}
+
+.product-card-body:hover {
+	background-color: #ddf1ef;
+}
+
+.popular {
+	color: #f1b124;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	background-color: white;
+	padding: 0.3rem;
+	border-radius: 0.25rem;
+	border: 1px solid #f1b124;
 }

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<main>
+    <section>
+        <div class="container px-4 mt-4 d-flex justify-content-end align-items-baseline">
+            {% if user.is_authenticated %}
+            <p class="me-3">Hi <strong>{{user.username}}</strong>!</p>
+            {% endif %}
+            <div>
+                <button class="btn bag-button">
+                    <a href="#"><i class="bi bi-cart-fill"></i> € 0.00</a>
+                </button>
+            </div>
+        </div>
+        <h1 class="text-center my-3">Products</h1>
+        <div class="my-sm-5">
+            <div class="container product-card-container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
+                    {% for product in products %}
+                    <div class="col product-card">
+                        <a href="#">
+                        <div class="card shadow h-100 product-card-body">
+                            <img src="{{product.image.url}}" class="card-img-top" alt="{{product.name}} cupcake image">
+                            {% if product.popular %}
+                                <p class="card-text text-end m-0 fw-bold popular">Popular</p>
+                            {% endif %}
+                            <div class="card-body">
+                                <p class="card-text text-center text-uppercase m-0">{{ product.name }}</p>
+                                <p class="card-text text-center fw-bold">€ {{ product.price }}</p>
+                                {% if user.is_superuser%}
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                    <button type="button" class="btn btn-sm sitebutton">Edit</button>
+                                    <button type="button" class="btn btn-sm sitebutton">Delete</button>
+                                    </div>
+                                </div>
+                              {% endif %}
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock %}
