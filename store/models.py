@@ -31,7 +31,7 @@ class Product(models.Model):
     popular = models.BooleanField(default=False)
 
     class Meta:
-        ordering = ['-created_on']
+        ordering = ['name']
 
     def __str__(self):
         return self.name
