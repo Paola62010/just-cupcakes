@@ -29,6 +29,11 @@
                     {% endif %}
                     <div class="small mb-1">SKU: {{product.sku}}</div>
                     <h1 class="display-5">{{product.name}} {% if product.popular %}<span class="pop-detail">(Popular)</span>{% endif %}</h1>
+                    {% if product.category %}
+                    <div>
+                        <a class="category-tag" href="{% url 'products' %}?category={{product.category.slug}}"><i class="bi bi-tag-fill"></i> {{product.category.name}}</a>
+                    </div>
+                    {% endif %}
                     <div class="fs-5 mb-5">
                         <span>€ {{product.price}}</span><span class="fs-6"> (12 cupcakes)</span>
                     </div>

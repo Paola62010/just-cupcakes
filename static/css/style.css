@@ -148,6 +148,22 @@ footer i:hover {
 	font-size: 1rem;
 }
 
+.category-tag,
+.category-tag2 {
+	color: #f1b124;
+	transition: color .15s ease-in-out;
+}
+
+.category-tag:hover {
+	color: #24857c;
+}
+
+.selector {
+	border: 1px solid #24857c;
+	border-radius: 0.25rem;
+	color: inherit;
+}
+
 @media only screen and (max-width: 576px) {
 	.detail-image {
 		height: 300px;

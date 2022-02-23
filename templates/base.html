@@ -36,13 +36,13 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="shopDropdown">
                               <li>
-                                <a class="dropdown-item" href="#">CLASSIC FLAVOURS</a>
+                                <a class="dropdown-item" href="{% url 'products' %}?category=classic-flavours">CLASSIC FLAVOURS</a>
                               </li>
                               <li>
-                                <a class="dropdown-item" href="#">LIMITED EDITIONS</a>
+                                <a class="dropdown-item" href="{% url 'products' %}?category=limited-editions">LIMITED EDITIONS</a>
                               </li>
                               <li>
-                                <a class="dropdown-item" href="#">MONTHLY CUPCAKE</a>
+                                <a class="dropdown-item" href="{% url 'products' %}?category=monthly-cupcake">MONTHLY CUPCAKE</a>
                               </li>
                               <li>
                                 <a class="dropdown-item" href="{% url 'products' %}">ALL CUPCAKES</a>
