@@ -26,7 +26,7 @@
             </div>
             <!-- Free delivery info -->
             <div class="card my-5 py-4 text-center delivery-info">
-                <div class="card-body"><p class="m-0">Freshly made cupcakes every day. Free delivery on any orders above €50. Place an order with us today!</p></div>
+                <div class="card-body"><p class="m-0">Freshly made cupcakes every day. Free delivery on any orders above €{{free_delivery_threshold}}. Place an order with us today!</p></div>
             </div>
             <!-- Call to action cards -->
             <div class="row gx-4 gx-lg-5">
@@ -34,7 +34,7 @@
                     <div class="card h-100">
                         <div class="card-body">
                             <h2 class="card-title">Fast deliveries</h2>
-                            <p class="card-text">All our cupcakes are available to purchase online in boxes of 12. We can deliver anywhere in Dublin for just €10. We offer a free delivery on orers above €50. All our orders are shipped within 48 hours from your order. Shop now!</p>
+                            <p class="card-text">All our cupcakes are available to purchase online in boxes of 12. We can deliver anywhere in Dublin for just €{{standard_delivery}}. We offer a free delivery on orders above €{{free_delivery_threshold}}. All our orders are shipped within 48 hours from your order. Shop now!</p>
                         </div>
                         <div class="card-footer action-cards-footer"><a class="btn sitebutton px-4" href="{% url 'products' %}">Go</a></div>
                     </div>
