@@ -21,6 +21,8 @@ h1 {
 
 a {
 	text-decoration: none;
+	color: inherit;
+	font-family: inherit;
 }
 
 .navbar {
@@ -67,8 +69,7 @@ footer i:hover {
 	transition: color .15s ease-in-out, background-color .15s ease-in-out;
 }
 
-.bag-button a {
-	text-decoration: none;
+.bag-button a:hover {
 	color: inherit;
 }
 
@@ -118,8 +119,7 @@ footer i:hover {
 	height: 500px;
 }
 
-.product-card a {
-	font-family: inherit;
+.product-card a:hover {
 	color: inherit;
 }
 
@@ -162,6 +162,22 @@ footer i:hover {
 	border: 1px solid #24857c;
 	border-radius: 0.25rem;
 	color: inherit;
+	width: 200px;
+}
+
+.all-products-link:hover {
+	font-weight: bold;
+	color: inherit;
+}
+
+.no-results-box {
+	background-color: #ddf1ef;
+	padding: 1.5rem 1rem;
+	border-radius: 0.25rem;
+}
+
+.magnifying-glass {
+	font-size: 2.5rem;
 }
 
 @media only screen and (max-width: 576px) {

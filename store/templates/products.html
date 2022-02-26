@@ -16,24 +16,39 @@
             </div>
         </div>
         <h1 class="text-center my-3">Products</h1>
-        <div class="container">
-            <div class="text-end">
+        <div class="container mb-3">
+            <!--Product sorting-->
+            <div class="text-center text-sm-end">
                 <select id="sort-selector" class="custom-select custom-select-sm selector">
                     <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                    <option value="date_asc" {% if current_sorting == 'date_asc' %}selected{% endif %}>Date (oldest first)</option>
-                    <option value="date_desc" {% if current_sorting == 'date_desc' %}selected{% endif %}>Date (newest first)</option>
-                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
-                    <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
-                    <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                    <option value="price-asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                    <option value="price-desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                    <option value="created_on-asc" {% if current_sorting == 'date_asc' %}selected{% endif %}>Date (oldest first)</option>
+                    <option value="created_on-desc" {% if current_sorting == 'date_desc' %}selected{% endif %}>Date (newest first)</option>
+                    <option value="name-asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                    <option value="name-desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                    <option value="category-asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+                    <option value="category-desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
                 </select>
+            </div>
+            <div>
+                <p class="mt-5 mt-sm-3"><a class="all-products-link" href="{% url 'products' %}"> Products</a> | {{products|length}} items
+                {% if search %}
+                <span> for <strong>"{{search}}"</strong></span>
+                {% endif %}
+                </p>
             </div>
         </div>
         <div class="my-sm-5">
             <!--Product cards-->
             <div class="container product-card-container">
+                {% if products|length == 0 %}
+                <div class="no-results-box">
+                    <p class="text-center"><i class="bi bi-search magnifying-glass"></i></p>
+                    <p class="text-center">We did not find any results for<strong> "{{search}}"</strong></p>
+                    <p class="text-center">Please try a new search.</p>
+                </div>
+                {% endif %}
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
                     {% for product in products %}
                     <div class="col product-card">
@@ -68,5 +83,27 @@
         </div>
     </section>
 </main>
-
 {% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script>
+    $('#sort-selector').change(function(){
+        let selector = $(this)
+        let currentUrl = new URL(window.location);
+        let selectedValue = selector.val();
+        if(selectedValue != "reset") {
+            let sort = selectedValue.split("-")[0]
+            let direction = selectedValue.split("-")[1]
+            currentUrl.searchParams.set("sort", sort);
+            currentUrl.searchParams.set("direction", direction);
+            window.location.replace(currentUrl);
+        } else {
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
+            window.location.replace(currentUrl);
+        }
+    })
+</script>
+{% endblock %}
+
