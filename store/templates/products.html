@@ -11,7 +11,7 @@
             {% endif %}
             <div>
                 <button class="btn bag-button">
-                    <a href="#"><i class="bi bi-cart-fill"></i> € 0.00</a>
+                    <a href="{% url 'bag' %}"><i class="bi bi-cart-fill"></i> € 0.00</a>
                 </button>
             </div>
         </div>
@@ -44,7 +44,7 @@
             <div class="container product-card-container">
                 {% if products|length == 0 %}
                 <div class="no-results-box">
-                    <p class="text-center"><i class="bi bi-search magnifying-glass"></i></p>
+                    <p class="text-center"><i class="bi bi-search icons"></i></p>
                     <p class="text-center">We did not find any results for<strong> "{{search}}"</strong></p>
                     <p class="text-center">Please try a new search.</p>
                 </div>

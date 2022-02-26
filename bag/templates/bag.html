@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<main>
+    <section>
+        <div class="container px-4 mt-4 d-flex justify-content-end align-items-baseline">
+            {% if user.is_authenticated %}
+            <p class="me-3">Hi <strong>{{user.username}}</strong>!</p>
+            {% endif %}
+            <div>
+                <button class="btn view-bag-button">
+                    <i class="bi bi-cart-fill"></i> € 0.00
+                </button>
+            </div>
+        </div>
+        <h1 class="text-center my-3">My bag summary</h1>
+        <div class="container">
+            {% if products|length == 0 %}
+                <div class="no-results-box">
+                    <p class="text-center"><i class="bi bi-cart icons"></i></p>
+                    <p class="text-center">Your bag is currently empty.</p>
+                    <div class="text-center">
+                        <a class="keep-shopping" href="{% url 'products' %}">
+                            <i class="bi bi-arrow-left-circle-fill icons" id="back-arrow"></i> KEEP SHOPPING
+                        </a>
+                    </div>
+                </div>
+            {% endif %}
+            <div>
+                <div class="table-responsive rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock %}

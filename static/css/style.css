@@ -23,6 +23,7 @@ a {
 	text-decoration: none;
 	color: inherit;
 	font-family: inherit;
+	transition: all .15s ease-in-out;
 }
 
 .navbar {
@@ -62,14 +63,16 @@ footer i:hover {
 
 .search-button,
 .bag-button,
-.sitebutton {
+.sitebutton,
+.view-bag-button {
 	background-color: #ddf1ef;
 	color: #24857c;
 	border: 1px solid #24857c;
 	transition: color .15s ease-in-out, background-color .15s ease-in-out;
 }
 
-.bag-button a:hover {
+.bag-button a:hover,
+.view-bag-button:hover {
 	color: inherit;
 }
 
@@ -165,7 +168,8 @@ footer i:hover {
 	width: 200px;
 }
 
-.all-products-link:hover {
+.all-products-link:hover,
+.keep-shopping:hover {
 	font-weight: bold;
 	color: inherit;
 }
@@ -176,8 +180,12 @@ footer i:hover {
 	border-radius: 0.25rem;
 }
 
-.magnifying-glass {
+.icons {
 	font-size: 2.5rem;
+}
+
+#back-arrow {
+	vertical-align: sub;
 }
 
 @media only screen and (max-width: 576px) {
