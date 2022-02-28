@@ -32,10 +32,16 @@
                 </select>
             </div>
             <div>
-                <p class="mt-5 mt-sm-3"><a class="all-products-link" href="{% url 'products' %}"> Products</a> | {{products|length}} items
-                {% if search %}
-                <span> for <strong>"{{search}}"</strong></span>
-                {% endif %}
+                <p class="mt-5 mt-sm-3">
+                    <a class="all-products-link" href="{% url 'products' %}"> Products</a>
+                     | {% if products|length == 1 %}{{products|length}} item {% else %} {{products|length}} items {% endif %}
+                    {% if search %}
+                    <span> for <strong>"{{search}}"</strong></span>
+                    {% else %}
+                    {% for category in current_category %}
+                    <span> in <strong>{{category.name}}</strong></span>
+                    {% endfor %}
+                    {% endif %}
                 </p>
             </div>
         </div>

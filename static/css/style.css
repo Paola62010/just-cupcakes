@@ -188,6 +188,23 @@ footer i:hover {
 	vertical-align: sub;
 }
 
+.minus-qty,
+.plus-qty {
+	background-color: #24857c;
+	color: white;
+	font-weight: bold;
+}
+
+.minus-qty:hover,
+.plus-qty:hover {
+	color: white;
+}
+
+.qty-input {
+	max-width: 3rem;
+	min-width: 2rem;
+}
+
 @media only screen and (max-width: 576px) {
 	.detail-image {
 		height: 300px;
