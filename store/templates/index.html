@@ -10,7 +10,9 @@
             {% endif %}
             <div>
                 <button class="btn bag-button">
-                    <a href="{% url 'bag' %}"><i class="bi bi-cart-fill"></i> € 0.00</a>
+                    <a href="{% url 'bag' %}"><i class="bi bi-cart-fill"></i> 
+                        {% if grand_total != 10 %} € {{grand_total|floatformat:2}} {% else %} € 0.00 {% endif %}
+                    </a>
                 </button>
             </div>
         </div>
