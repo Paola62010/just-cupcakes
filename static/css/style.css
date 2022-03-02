@@ -72,7 +72,8 @@ footer i:hover {
 }
 
 .bag-button a:hover,
-.view-bag-button:hover {
+.view-bag-button:hover,
+.checkout-button:hover {
 	color: inherit;
 }
 
@@ -205,8 +206,49 @@ footer i:hover {
 	min-width: 2rem;
 }
 
+.table-img {
+	width: 80px;
+}
+
+.table,
+.table th,
+.table tr {
+	color: #24857c;
+}
+
+.bag-table {
+	background-color: white;
+	border-radius: 0.25em;
+	padding: 1.5rem;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+	background-color: #ddf1ef;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+	--bs-table-accent-bg: rgb 0 0 0 0;
+	color: #24857c;
+}
+
+.lock-icon {
+	font-size: 1.5rem;
+}
+
 @media only screen and (max-width: 576px) {
 	.detail-image {
 		height: 300px;
+	}
+	.table-img {
+		width: 50px;
+	}
+	.bag-table {
+		padding: 1.5rem 0;
+	}
+	.icons {
+		font-size: 1.5rem;
+	}
+	.lock-icon {
+		font-size: 1rem;
 	}
 }
