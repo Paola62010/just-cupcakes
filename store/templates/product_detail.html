@@ -10,11 +10,12 @@
             <p class="me-3">Hi <strong>{{user.username}}</strong>!</p>
             {% endif %}
             <div>
-                <button class="btn bag-button">
-                    <a href="{% url 'bag' %}"><i class="bi bi-cart-fill"></i> 
+                <a href="{% url 'bag' %}">
+                    <button class="btn bag-button">
+                        <i class="bi bi-cart-fill"></i> 
                         {% if grand_total != 10 %} € {{grand_total|floatformat:2}} {% else %} € 0.00 {% endif %}
-                    </a>
-                </button>
+                    </button>
+                </a>
             </div>
         </div>
         <div class="py-md-5">
