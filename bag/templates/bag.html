@@ -48,8 +48,8 @@
                             </td>
                             <td class="p-3">
                                 <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                <p class="my-0 text-muted">(12 cupcakes)</p>
                                 <p class="my-0 text-muted">€ {{ item.product.price }}</p>
-                                <p class="my-0 text-muted">12 cupcakes</p>
                             </td>
                             <td class="p-3">
                                 <p class="my-0">{{ item.quantity }}</p>
@@ -61,11 +61,11 @@
                           {% endfor %}
                           <tr>
                               <td colspan="5" class="text-end py-3">
-                                  <p class="m-0 pe-sm-5 pe-3"><strong>Bag Total: € {{ total|floatformat:2 }}</strong></p>
-                                  <p class="m-0 pe-sm-5 pe-3">Delivery: € {{ delivery|floatformat:2 }}</p>
-                                  <p class="m-0 pe-sm-5 pe-3"><strong>Grand Total: € {{ grand_total|floatformat:2 }}</strong></p>
+                                  <p class="m-0"><strong>Bag Total: € {{ total|floatformat:2 }}</strong></p>
+                                  <p class="m-0">Delivery: € {{ delivery|floatformat:2 }}</p>
+                                  <p class="m-0"><strong>Grand Total: € {{ grand_total|floatformat:2 }}</strong></p>
                                   {% if free_delivery_delta > 0 %}
-                                  <p class="m-0 pe-sm-5 pe-3">You could get a free delivery by spending just {{free_delivery_delta}} more!</p>
+                                  <p class="m-0">You could get a free delivery by spending just {{free_delivery_delta}} more!</p>
                                   {% endif %}
                               </td>
                           </tr>

@@ -46,9 +46,15 @@
                         {% csrf_token %}
                     
                     <div class="d-flex">
-                        <button class="btn minus-qty mx-1">-</button>
-                        <input class="form-control text-center qty-input" id="quantity" name="quantity" type="num" value="1" min="1" max="10"/>
-                        <button class="btn plus-qty me-3 ms-1">+</button>
+                        <div class="input-group input-group-{{ product.id }}">
+                            <div class="input-group-prepend">
+                                <button class="btn minus-qty mx-1 minus-qty_{{ product.id }}" data-item_id="{{product.id}}">-</button>
+                            </div>
+                            <input data-item_id="{{ product.id }}" class="id_qty_{{ product.id }} qty_input form-control text-center qty-input" id="quantity" name="quantity" type="number" value="1" min="1" max="10"/>
+                            <div class="input-group-append">
+                                <button class="btn plus-qty me-3 ms-1 plus-qty_{{ product.id }}" data-item_id="{{product.id}}">+</button>
+                            </div>
+                        </div>
                         <button class="btn sitebutton flex-shrink-0" type="submit">
                             <i class="bi-cart-fill me-1"></i>
                             Add to cart
@@ -68,4 +74,8 @@
     </section>
 </main>
 
+{% endblock %}
+{% block postloadjs %}
+{{ block.super }}
+{% include 'includes/qty_input_js.html' %}
 {% endblock %}
