@@ -235,6 +235,31 @@ footer i:hover {
 	font-size: 1.5rem;
 }
 
+.free-del {
+	color: #f1b124;
+}
+
+.qty-selection-bag {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: start;
+}
+
+.input-group > .form-control {
+	min-width: 2rem;
+	width: 2.5rem;
+}
+
+.form-control {
+	padding: .375rem 0.375rem;
+}
+
+.minus-qty,
+.plus-qty {
+	width: 2.5rem;
+}
+
 @media only screen and (max-width: 576px) {
 	.detail-image {
 		height: 300px;

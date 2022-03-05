@@ -45,6 +45,12 @@
                           <tr>
                             <td class="p-3">
                                 <img class="img-fluid rounded table-img" src="{{ item.product.image.url }}" alt="{{ item.product.name }} cupcake image">
+                                <form action="{% url 'bag_remove' item.item_id %}" method="POST">
+                                    {% csrf_token %}
+                                <div class="mt-3">
+                                    <button class="btn sitebutton"><i class="bi bi-trash-fill"></i></button>
+                                </div>
+                                </form>
                             </td>
                             <td class="p-3">
                                 <p class="my-0"><strong>{{ item.product.name }}</strong></p>
@@ -52,12 +58,26 @@
                                 <p class="my-0 text-muted">€ {{ item.product.price }}</p>
                             </td>
                             <td class="p-3">
-                                <p class="my-0">{{ item.quantity }}</p>
+                                <form action="#" method="POST">
+                                    {% csrf_token %}
+                                    <div>
+                                        <div class="input-group input-group-{{ item.item_id }} qty-selection-bag">
+                                            <div class="input-group-prepend">
+                                                <button class="btn minus-qty mx-1 minus-qty_{{ item.item_id }}" data-item_id="{{item.item_id}}">-</button>
+                                            </div>
+                                            <input data-item_id="{{ item.item_id }}" class="id_qty_{{ item.item_id }} qty_input form-control text-center qty-input" id="quantity" name="quantity" type="number" value="{{item.quantity}}" min="1" max="10"/>
+                                            <div class="input-group-append">
+                                                <button class="btn plus-qty mx-1 plus-qty_{{ item.item_id }}" data-item_id="{{item.item_id}}">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </td>
                             <td class="p-3">
                                 <p class="my-0">€ {{ item.product.price }}</p>
                             </td>
                           </tr>
+                          
                           {% endfor %}
                           <tr>
                               <td colspan="5" class="text-end py-3">
@@ -65,7 +85,7 @@
                                   <p class="m-0">Delivery: € {{ delivery|floatformat:2 }}</p>
                                   <p class="m-0"><strong>Grand Total: € {{ grand_total|floatformat:2 }}</strong></p>
                                   {% if free_delivery_delta > 0 %}
-                                  <p class="m-0">You could get a free delivery by spending just {{free_delivery_delta}} more!</p>
+                                  <p class="m-0 free-del">You could get a free delivery by spending just {{free_delivery_delta}} more!</p>
                                   {% endif %}
                               </td>
                           </tr>
@@ -88,4 +108,8 @@
     </section>
 </main>
 
+{% endblock %}
+{% block postloadjs %}
+{{ block.super }}
+{% include 'includes/qty_input_js.html' %}
 {% endblock %}
