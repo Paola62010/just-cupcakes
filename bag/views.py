@@ -26,6 +26,7 @@ def add_to_bag(request, item_id):
 
 
 def bag_remove(request, item_id):
+    """A view to remove items from the bag"""
     try:
         product = get_object_or_404(Product, pk=item_id)
         bag = request.session.get('bag', {})
@@ -37,3 +38,18 @@ def bag_remove(request, item_id):
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
         return redirect(reverse('bag'))
+
+
+def bag_edit(request, item_id):
+    """A view to edit the bag items quantity"""
+
+    product = get_object_or_404(Product, pk=item_id)
+    quantity = int(request.POST.get('quantity'))
+    bag = request.session.get('bag', {})
+
+    if quantity > 0:
+        bag[item_id] = quantity
+        messages.success(request,
+                         (f'Updated {product.name} '
+                          f'quantity to {bag[item_id]}'))
+    return redirect(reverse('bag'))
