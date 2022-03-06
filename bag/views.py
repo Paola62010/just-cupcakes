@@ -11,14 +11,19 @@ def view_bag(request):
 
 def add_to_bag(request, item_id):
     """A view to add products to the shopping bag"""
+    product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
     if item_id in list(bag.keys()):
         bag[item_id] += quantity
+        messages.success(request,
+                         (f'Updated "{product.name}" '
+                          f'quantity to {bag[item_id]}'))
     else:
         bag[item_id] = quantity
+        messages.success(request, f'Added "{product.name}" to your bag')
 
     request.session['bag'] = bag
 
@@ -31,7 +36,7 @@ def bag_remove(request, item_id):
         product = get_object_or_404(Product, pk=item_id)
         bag = request.session.get('bag', {})
         bag.pop(item_id)
-        messages.success(request, f'Removed {product.name} from your bag')
+        messages.success(request, f'Removed "{product.name}" from your bag')
         request.session['bag'] = bag
         return redirect(reverse('bag'))
 
@@ -50,6 +55,7 @@ def bag_edit(request, item_id):
     if quantity > 0:
         bag[item_id] = quantity
         messages.success(request,
-                         (f'Updated {product.name} '
+                         (f'Updated "{product.name}" '
                           f'quantity to {bag[item_id]}'))
+    request.session['bag'] = bag
     return redirect(reverse('bag'))
