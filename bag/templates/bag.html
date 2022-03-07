@@ -30,6 +30,7 @@
                     </div>
                 </div>
             {% else %}
+            <!--Bag contents table-->
             <div class="bag-table">
                 <div class="table-responsive rounded">
                     <table class="table table-striped">
@@ -117,6 +118,7 @@
 {{ block.super }}
 {% include 'includes/qty_input_js.html' %}
 <script>
+    //Update item quantity link
     $('.refresh-link').click(function(e) {
         var form = $(this).prev('.update-qty-form');
         form.submit();
