@@ -277,6 +277,19 @@ footer i:hover {
 	font-weight: bold;
 }
 
+.checkout-links {
+	color: #f1b124;
+}
+
+.checkout-links:hover {
+	color: #24857c;
+	font-weight: bold;
+}
+
+.checkout-fieldset div {
+	margin-bottom: 1rem;
+}
+
 @media only screen and (max-width: 576px) {
 	.detail-image {
 		height: 300px;
