@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('', include('store.urls'), name='store.urls'),
+    path('', include('checkout.urls'), name='checkout.urls'),
     path('', include('bag.urls'), name='bag.urls'),
     path(
         'favicon.ico',

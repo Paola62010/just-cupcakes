@@ -103,9 +103,8 @@
                             <i class="bi bi-arrow-left-circle-fill icons" id="back-arrow"></i> KEEP SHOPPING
                         </a>
                     </div>
-                    <button class="btn sitebutton">
-                        <a href="#" class="checkout-button"><i class="bi bi-lock-fill lock-icon"></i> CHECKOUT</a>
-                    </button>
+                        <a href="{% url 'checkout' %}" class="checkout-button">
+                            <button class="btn sitebutton"><i class="bi bi-lock-fill lock-icon"></i> CHECKOUT</button></a>
                 </div>
             </div>
             {% endif %}
