@@ -277,6 +277,7 @@ footer i:hover {
 	font-weight: bold;
 }
 
+/* Checkout page */
 .checkout-links {
 	color: #f1b124;
 }
@@ -288,6 +289,38 @@ footer i:hover {
 
 .checkout-fieldset div {
 	margin-bottom: 1rem;
+}
+
+.checkout-img {
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+}
+
+.StripeElement,
+.stripe-inputs {
+	box-sizing: border-box;
+	height: 40px;
+	padding: 10px 12px;
+	border: 1px solid #ced4da;
+	border-radius: .25rem;
+	background-color: white;
+	-webkit-transition: box-shadow 150ms ease;
+	transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus,
+.stripe-inputs:focus,
+.stripe-inputs:active {
+	box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--webkit-autofill {
+	background-color: #fefde5 !important;
+}
+
+.stripe-inputs::placeholder {
+	color: #aab7c4;
 }
 
 @media only screen and (max-width: 576px) {
