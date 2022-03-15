@@ -20,3 +20,19 @@ var style = {
 
 var card = elements.create('card', {style: style});
 card.mount('#card-element');
+
+//Validaiton errors on card element
+
+card.addEventListener('change', function(event){
+    var errorDiv = document.getElementById('card-errors');
+    if(event.error){
+        var htmlContent = `
+        <span>
+            <i class="bi bi-exclamation-triangle-fill"></i>
+        </span>
+        <span>${event.error.message}</span>`;
+        $(errorDiv).html(htmlContent);
+    } else{
+        errorDiv.textContent = '';
+    }
+});
