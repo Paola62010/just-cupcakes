@@ -89,9 +89,11 @@
                 <div class="mb-3" id="card-element"></div>
                 <!--Displays form errors-->
                 <div class="mb-3 text-danger" id="card-errors"></div>
+                <!-- Pass the client secret to the view so we can get the payment intent id -->
+                <input type="hidden" value="{{ client_secret }}" name="client_secret">
               </fieldset>
               <hr class="my-4">
-              <button class="btn sitebutton" type="submit">Place Order</button>
+              <button class="btn sitebutton" type="submit" id="order-submit">Place Order</button>
             </form>
           </div>
         </div>
