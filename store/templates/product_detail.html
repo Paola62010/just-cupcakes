@@ -27,10 +27,10 @@
                     <!--Edit and delete buttons for superuser-->
                     <div class="d-flex justify-content-end align-items-center">
                         <button type="button" class="btn sitebutton me-3">Edit</button>
-                        <button type="button" class="btn sitebutton me-3">Delete</button>
+                        <button type="button" class="btn sitebutton">Delete</button>
                     </div>
                     {% endif %}
-                    <div class="small mb-1">SKU: {{product.sku}}</div>
+                    <div class="small mb-1 mt-3">SKU: {{product.sku}}</div>
                     <h1 class="display-5">{{product.name}} {% if product.popular %}<span class="pop-detail">(Popular)</span>{% endif %}</h1>
                     {% if product.category %}
                     <div>

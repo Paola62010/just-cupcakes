@@ -42,8 +42,12 @@
                         <span class="text-muted"> € {{ item.product.price | calc_subtotal:item.quantity}}</span>
                     </li>
                     {% endfor %}
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span class="text-muted">Delivery cost</span>
+                        <p class="mb-0 text-muted">€ {{ delivery|floatformat:2 }}</p>
+                    </li>
                     <li class="list-group-item d-flex justify-content-between" style="color: inherit;">
-                        <span>Total (EUR)</span>
+                        <span>Total</span>
                         <strong>€ {{ grand_total|floatformat:2 }}</strong>
                     </li>
                 </ul>

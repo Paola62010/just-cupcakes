@@ -323,6 +323,16 @@ footer i:hover {
 	color: #aab7c4;
 }
 
+/* checkout success */
+
+.order-summary-li {
+	color: inherit;
+}
+
+.email-conf {
+	color: #f1b124;
+}
+
 @media only screen and (max-width: 576px) {
 	.detail-image {
 		height: 300px;

@@ -1,9 +1,103 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load bag_tools %}
 
 {% block content %}
 <main>
-    
+    <section>
+        <h1 class="text-center my-3">Thank you for your order!</h1>
+        <div class="container my-5">
+            <div>
+                <p class="mb-5 text-center text-sm-start">Confirmation email sent to:<span class="email-conf"> {{ order.email }}</span></p>
+            </div>
+            <div class="row gy-5">
+                <!--Order items-->
+                <div class="col-xl-4 order-xl-last">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                        <span>Purchased:</span>
+                    </h4>
+                    <ul class="list-group mb-3">
+                        {% for item in order.lineitems.all %}
+                        <li class="list-group-item d-flex justify-content-between lh-sm" style="color: inherit;">
+                            <div class="d-flex">
+                            <div class="me-3">
+                                <img class="img-fluid rounded checkout-img" src="{{ item.product.image.url }}" alt="{{ item.product.name }} cupcake image">
+                            </div>
+                            <div>
+                                <h6 class="my-0">{{item.product.name}}</h6>
+                                <small class="text-muted">Qty {{item.quantity}}</small>
+                            </div>
+                        </div>
+                            <span class="text-muted"> € {{ item.product.price | calc_subtotal:item.quantity }}</span>
+                        </li>
+                        {% endfor %}
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span class="text-muted">Delivery cost</span>
+                            <p class="mb-0 text-muted">€ {{ order.delivery_cost|floatformat:2 }}</p>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between" style="color: inherit;">
+                            <span>Total</span>
+                            <strong>€ {{ order.grand_total|floatformat:2 }}</strong>
+                        </li>
+                    </ul>
+              </div>
+              <!--Customer details-->
+              <div class="col-xl-8">
+                  <h4 class="mb-3">Order Info:</h4>
+                  <ul class="list-group mb-5">
+                      <li class="list-group-item order-summary-li">
+                          <h6>Order Number</h6>
+                          <p class="mb-0 text-muted">{{ order.order_number }}</p>
+                      </li>
+                      <li class="list-group-item order-summary-li">
+                        <h6>Order Date</h6>
+                        <p class="mb-0 text-muted">{{ order.order_date }}</p>
+                    </li>
+                  </ul>
+                  <h4 class="mb-3">Delivering to:</h4>
+                  <ul class="list-group mb-5">
+                    <li class="list-group-item order-summary-li">
+                        <h6>Full Name</h6>
+                        <p class="mb-0 text-muted">{{ order.full_name }}</p>
+                    </li>
+                    <li class="list-group-item order-summary-li">
+                      <h6>Email Address</h6>
+                      <p class="mb-0 text-muted">{{ order.email }}</p>
+                    </li>
+                    <li class="list-group-item order-summary-li">
+                        <h6>Phone Number</h6>
+                        <p class="mb-0 text-muted">{{ order.phone }}</p>
+                    </li>
+                    <li class="list-group-item order-summary-li">
+                        <h6>City</h6>
+                        <p class="mb-0 text-muted">{{ order.city }}</p>
+                    </li>
+                    <li class="list-group-item order-summary-li">
+                        <h6>Address Line 1</h6>
+                        <p class="mb-0 text-muted">{{ order.address_line1 }}</p>
+                    </li>
+                    {% if order.address_line2 %}
+                    <li class="list-group-item order-summary-li">
+                        <h6>Address Line 2</h6>
+                        <p class="mb-0 text-muted">{{ order.address_line2 }}</p>
+                    </li>
+                    {% endif %}
+                    <li class="list-group-item order-summary-li">
+                        <h6>Post Code</h6>
+                        <p class="mb-0 text-muted">{{ order.post_code }}</p>
+                    </li>
+                    <li class="list-group-item order-summary-li">
+                        <h6>County</h6>
+                        <p class="mb-0 text-muted">{{ order.county }}</p>
+                    </li>
+                    <li class="list-group-item order-summary-li">
+                        <h6>Country</h6>
+                        <p class="mb-0 text-muted">{{ order.country }}</p>
+                    </li>
+                </ul>
+              </div>
+        </div>
+    </section>
 </main>
 
 {% endblock %}
