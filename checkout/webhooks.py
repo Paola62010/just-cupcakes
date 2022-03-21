@@ -19,6 +19,7 @@ class StripeWebhookHandler:
 
     def handle_payment_intent_succeeded(self, event):
         """Handles payment_intent.succeeded webhook"""
+        intent = event.data.object
         return HttpResponse(
             content=f'Webhook received: {event["event"]}',
             status=200
@@ -57,5 +58,22 @@ def webhook(request):
     except Exception as e:
         return HttpResponse(content=e, status=400)
 
-    print('Success')
-    return HttpResponse(status=200)
+    # Setup a webhook handler
+    handler = StripeWebhookHandler(request)
+
+    # Map weebhook events to relevant handler
+    event_map = {
+        'payment_intent.succeeded': handler.handle_payment_intent_succeeded,
+        'payment_intent.payment_failed': handler.handle_payment_intent_payment_failed,
+    }
+
+    # Get weebhook type from Stripe
+    event_type = event['type']
+
+    # Get relevant handler from the event map
+    # Use the generic one by default
+    event_handler = event_map.get(event_type, handler.handle_event)
+
+    # Call the event handler with the event
+    response = event_handler(event)
+    return response

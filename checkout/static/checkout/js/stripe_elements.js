@@ -38,30 +38,70 @@ card.addEventListener('change', function(event){
 });
 
 // Checkout form submission
-
+var form = document.getElementById('payment-form');
 form.addEventListener('submit', function(e){
     e.preventDefault();
     card.update({'disabled': true});
     $('#order-submit').attr('disabled', true);
-    stripe.confirmCardPayment(clientSecret, {
-        payment_method: {
-            card: card,
-        }
-    }).then(function(result){
-        if (result.error){
-            var errorDiv = document.getElementById('card-errors');
-            var htmlContent = `
-                <span>
-                    <i class="bi bi-exclamation-triangle-fill"></i>
-                </span>
-                <span>${event.error.message}</span>`;
-            $(errorDiv).html(htmlContent);
-            card.update({'disabled': false});
-            $('#order-submit').attr('disabled', false);
-        } else {
-            if (result.paymentIntent.status === 'succeeded'){
-                form.submit()
+
+    var saveInfo = Boolean($('#save-info').attr('checked'));
+    var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
+    var postData = {
+        'csrfmiddlewaretoken': csrfToken,
+        'client_secret': clientSecret,
+        'save_info': saveInfo,
+    };
+    var url = '/cache_checkout_data';
+    $.post(url, postData).done(function(){
+        stripe.confirmCardPayment(clientSecret, {
+            payment_method: {
+                card: card,
+                billing_details: {
+                    name: $.trim(form.full_name.value),
+                    phone: $.trim(form.phone.value),
+                    email: $.trim(form.email.value),
+                    address:{
+                        line1: $.trim(form.address_line1.value),
+                        line2: $.trim(form.address_line2.value),
+                        city: $.trim(form.city.value),
+                        country: $.trim(form.country.value),
+                        state: $.trim(form.county.value),
+                    }
+                }
+            },
+            shipping: {
+                name: $.trim(form.full_name.value),
+                phone: $.trim(form.phone.value),
+                address: {
+                    line1: $.trim(form.address_line1.value),
+                    line2: $.trim(form.address_line2.value),
+                    city: $.trim(form.city.value),
+                    postal_code: $.trim(form.post_code.value),
+                    country: $.trim(form.country.value),
+                    state: $.trim(form.county.value),
+                }
+            },
+        }).then(function(result){
+            if (result.error){
+                var errorDiv = document.getElementById('card-errors');
+                var htmlContent = `
+                    <span>
+                        <i class="bi bi-exclamation-triangle-fill"></i>
+                    </span>
+                    <span>${result.error.message}</span>`;
+                $(errorDiv).html(htmlContent);
+                card.update({'disabled': false});
+                $('#order-submit').attr('disabled', false);
+            } else {
+                if (result.paymentIntent.status === 'succeeded'){
+                    form.submit()
+                }
             }
-        }
+        });
+
+    }).fail(function(){
+        // Reloads the page, the error will be in django messages
+        location.reload();
     })
-})
+    
+});
