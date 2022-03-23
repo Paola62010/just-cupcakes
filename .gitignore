@@ -1,3 +1,5 @@
 env.py
 .just-cupcakes
 .vscode
+.pyc
+__pycache__
