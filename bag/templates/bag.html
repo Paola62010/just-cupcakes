@@ -59,12 +59,12 @@
                                     {% csrf_token %}
                                     <div>
                                         <div class="input-group input-group-{{ item.item_id }} qty-selection-bag">
-                                            <div class="input-group-prepend">
-                                                <button class="btn minus-qty mx-1 minus-qty_{{ item.item_id }}" data-item_id="{{item.item_id}}">-</button>
-                                            </div>
-                                            <input data-item_id="{{ item.item_id }}" class="id_qty_{{ item.item_id }} qty_input form-control text-center qty-input" id="quantity" name="quantity" type="num" value="{{item.quantity}}" min="1" max="10"/>
                                             <div class="input-group-append">
                                                 <button class="btn plus-qty mx-1 plus-qty_{{ item.item_id }}" data-item_id="{{item.item_id}}">+</button>
+                                            </div>
+                                            <input data-item_id="{{ item.item_id }}" class="id_qty_{{ item.item_id }} qty_input form-control text-center qty-input" id="quantity" name="quantity" type="num" value="{{item.quantity}}" min="1" max="10"/>
+                                            <div class="input-group-prepend">
+                                                <button class="btn minus-qty mx-1 minus-qty_{{ item.item_id }}" data-item_id="{{item.item_id}}">-</button>
                                             </div>
                                         </div>
                                     </div>

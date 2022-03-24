@@ -5,6 +5,19 @@
 {% block content %}
 <main>
     <section>
+        <div class="container px-4 mt-4 d-flex justify-content-end align-items-baseline">
+            {% if user.is_authenticated %}
+            <p class="me-3">Hi <strong>{{user.username}}</strong>!</p>
+            {% endif %}
+            <div>
+                <a href="{% url 'bag' %}">
+                    <button class="btn bag-button">
+                        <i class="bi bi-cart-fill"></i> 
+                        {% if grand_total != 10 %} € {{grand_total|floatformat:2}} {% else %} € 0.00 {% endif %}
+                    </button>
+                </a>
+            </div>
+        </div>
         <h1 class="text-center my-3">Thank you for your order!</h1>
         <div class="container my-5">
             <div>

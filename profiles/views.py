@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from .models import UserProfile
+from checkout.models import Order
 from .forms import UserProfileForm
 
 
@@ -40,6 +41,21 @@ def edit_profile(request):
 
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+
+def view_past_order(request, order_number):
+    order = get_object_or_404(Order, order_number=order_number)
+
+    messages.info(request, (
+        f'This is a past confirmation for order number {order_number}.'
+    ))
+
+    template = 'checkout_success.html'
+    context = {
+        'order': order,
     }
 
     return render(request, template, context)

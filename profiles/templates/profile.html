@@ -27,9 +27,13 @@
                 </h4>
                 <ul class="list-group mb-3">
                     {% for order in orders %}
-                    <li class="list-group-item d-flex justify-content-between lh-sm" style="color: inherit;">
+                    <li class="list-group-item" style="color: inherit;">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Order Date</span>
+                            <p class="mb-0 text-muted">{{ order.order_date }}</p>
+                        </div>
                         <div>
-                            {{order.order_number}}
+                            <a class="order-link" href="{% url 'view_order' order.order_number %}">{{order.order_number}}</a>
                         </div>
                     </li>
                     {% endfor %}

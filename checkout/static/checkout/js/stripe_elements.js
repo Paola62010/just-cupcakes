@@ -44,7 +44,7 @@ form.addEventListener('submit', function(e){
     card.update({'disabled': true});
     $('#order-submit').attr('disabled', true);
 
-    var saveInfo = Boolean($('#save-info').attr('checked'));
+    var saveInfo = Boolean($('#id-save-info').attr('checked'));
     var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
     var postData = {
         'csrfmiddlewaretoken': csrfToken,

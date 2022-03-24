@@ -355,6 +355,27 @@ footer i:hover {
 	color: #f1b124;
 }
 
+/*  view profile*/
+
+.order-link {
+	transition: all .15s ease-in-out;
+}
+
+.order-link:hover {
+	color: #f1b124;
+}
+
+/*  edit profile */
+
+#id_default_country,
+#id_default_country option:not(:first-child) {
+	color: #000;
+}
+
+#id_default_country option:first-child {
+	color: #aab7c4;
+}
+
 @media only screen and (max-width: 576px) {
 	.detail-image {
 		height: 300px;
