@@ -67,6 +67,16 @@ footer i:hover {
 	color: #f1b124;
 }
 
+.messages-div {
+	position: absolute;
+	top: 6rem;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	width: fit-content;
+}
+
 .search-button,
 .bag-button,
 .sitebutton,
