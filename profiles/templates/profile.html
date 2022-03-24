@@ -19,6 +19,86 @@
         </div>
         
         <h1 class="text-center my-3">My Profile</h1>
+        <div class="row gy-5">
+            <!--Order items-->
+            <div class="col-xl-4 order-xl-last">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span>Past Orders:</span>
+                </h4>
+                <ul class="list-group mb-3">
+                    {% for order in orders %}
+                    <li class="list-group-item d-flex justify-content-between lh-sm" style="color: inherit;">
+                        <div>
+                            {{order.order_number}}
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+          </div>
+          <!--Customer details-->
+          <div class="col-xl-8">
+              <h4 class="mb-3">Default Delivery Info:</h4>
+              <ul class="list-group mb-3">
+                <li class="list-group-item order-summary-li">
+                    <h6>Phone Number</h6>
+                    {% if profile.default_phone == None %}
+                    <p class="mb-0 text-muted">(Not set)</p>
+                    {% else %}
+                    <p class="mb-0 text-muted">{{ profile.default_phone }}</p>
+                    {% endif %}
+                </li>
+                <li class="list-group-item order-summary-li">
+                    <h6>City</h6>
+                    {% if profile.default_city == None %}
+                    <p class="mb-0 text-muted">(Not set)</p>
+                    {% else %}
+                    <p class="mb-0 text-muted">{{profile.default_city }}</p>
+                    {% endif %}
+                </li>
+                <li class="list-group-item order-summary-li">
+                    <h6>Address Line 1</h6>
+                    {% if profile.default_address_line1 == None %}
+                    <p class="mb-0 text-muted">(Not set)</p>
+                    {% else %}
+                    <p class="mb-0 text-muted">{{ profile.default_address_line1 }}</p>
+                    {% endif %}
+                </li>
+                <li class="list-group-item order-summary-li">
+                    <h6>Address Line 2</h6>
+                    {% if profile.default_address_line2 == None %}
+                    <p class="mb-0 text-muted">(Not set)</p>
+                    {% else %}
+                    <p class="mb-0 text-muted">{{ profile.default_address_line2 }}</p>
+                    {% endif %}
+                </li>
+                <li class="list-group-item order-summary-li">
+                    <h6>Post Code</h6>
+                    {% if profile.default_post_code == None %}
+                    <p class="mb-0 text-muted">(Not set)</p>
+                    {% else %}
+                    <p class="mb-0 text-muted">{{ profile.default_post_code }}</p>
+                    {% endif %}
+                </li>
+                <li class="list-group-item order-summary-li">
+                    <h6>County</h6>
+                    {% if profile.default_county == None %}
+                    <p class="mb-0 text-muted">(Not set)</p>
+                    {% else %}
+                    <p class="mb-0 text-muted">{{ profile.default_county }}</p>
+                    {% endif %}
+                </li>
+                <li class="list-group-item order-summary-li">
+                    <h6>Country</h6>
+                    {% if profile.default_country == None %}
+                    <p class="mb-0 text-muted">(Not set)</p>
+                    {% else %}
+                    <p class="mb-0 text-muted">{{ profile.default_country }}</p>
+                    {% endif %}
+                </li>
+            </ul>
+            <a href="{% url 'edit_profile' %}" class="btn sitebutton">Update</a>
+          </div>
+    </div>
         
       </main>
     

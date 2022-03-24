@@ -304,7 +304,8 @@ footer i:hover {
 }
 
 .StripeElement,
-.stripe-inputs {
+.stripe-inputs,
+.profile-update-inputs {
 	box-sizing: border-box;
 	height: 40px;
 	padding: 10px 12px;
@@ -313,6 +314,10 @@ footer i:hover {
 	background-color: white;
 	-webkit-transition: box-shadow 150ms ease;
 	transition: box-shadow 150ms ease;
+}
+
+.profile-update-inputs {
+	margin-bottom: 1rem;
 }
 
 .StripeElement--focus,
@@ -325,7 +330,8 @@ footer i:hover {
 	background-color: #fefde5 !important;
 }
 
-.stripe-inputs::placeholder {
+.stripe-inputs::placeholder,
+.profile-update-inputs::placeholder {
 	color: #aab7c4;
 }
 
