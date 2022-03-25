@@ -376,6 +376,12 @@ footer i:hover {
 	color: #aab7c4;
 }
 
+/* add product */
+
+#add-product-form > div {
+	margin-top: 1rem;
+}
+
 @media only screen and (max-width: 576px) {
 	.detail-image {
 		height: 300px;

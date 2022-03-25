@@ -1,7 +1,11 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
+from django.urls import reverse
 from .models import Product, Category
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from .forms import ProductForm
 
 
 def home(request):
@@ -63,3 +67,34 @@ def product_detail(request, slug):
         'product': product,
     }
     return render(request, 'product_detail.html', context)
+
+
+@login_required
+def add_product(request):
+    """View to add a new product"""
+    if not request.user.is_superuser:
+        messages.error(request, ('Sorry, you do not have '
+                                 'privileges to access this '
+                                 'page.'))
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            product = form.save()
+            messages.success(request, 'Product added successfully.')
+            return redirect(reverse('product_detail', args=[product.slug]))
+        else:
+            messages.error(request,
+                           ('Sorry, your product coult not be added. '
+                            'Make sure the entered information is '
+                            'valid.'))
+    else:
+        form = ProductForm()
+
+    template = 'add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
