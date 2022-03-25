@@ -5,7 +5,7 @@
 {% block content %}
 
 <main>
-    <div class="container mt-4 d-flex justify-content-end align-items-baseline">
+    <div class="container px-4 mt-4 d-flex justify-content-end align-items-baseline">
         {% if user.is_authenticated %}
         <a href="{% url 'profile' %}" class="profile-link">
             <p class="me-3">Hi <strong>{{user.username}}</strong>!</p>
@@ -30,4 +30,14 @@
     </div>
 </main>
 
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('#new-image').change(function() {
+            var file = $('#new-image')[0].files[0];
+            $('#filename').text(`Image will be set to: ${file.name}`);
+        });
+    </script>
 {% endblock %}
