@@ -26,8 +26,8 @@
                     {% if user.is_superuser%}
                     <!--Edit and delete buttons for superuser-->
                     <div class="d-flex justify-content-end align-items-center">
-                        <button type="button" class="btn sitebutton me-3">Edit</button>
-                        <button type="button" class="btn sitebutton">Delete</button>
+                        <a href="{% url 'edit_product' product.slug %}" class="btn sitebutton me-3">Edit</a>
+                        <a href="#" class="btn sitebutton">Delete</a>
                     </div>
                     {% endif %}
                     <div class="small mb-1 mt-3">SKU: {{product.sku}}</div>

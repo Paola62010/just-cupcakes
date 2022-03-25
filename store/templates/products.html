@@ -77,8 +77,12 @@
                                 <!--Edit and delete buttons for superuser-->
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                    <button type="button" class="btn btn-sm sitebutton">Edit</button>
-                                    <button type="button" class="btn btn-sm sitebutton">Delete</button>
+                                        <a href="{% url 'edit_product' product.slug %}">
+                                            <button type="button" class="btn btn-sm sitebutton">Edit</button>
+                                        </a>
+                                        <a href="#">
+                                            <button type="button" class="btn btn-sm sitebutton">Delete</button>
+                                        </a>
                                     </div>
                                 </div>
                               {% endif %}
