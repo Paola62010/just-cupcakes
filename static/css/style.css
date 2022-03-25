@@ -26,6 +26,10 @@ a {
 	transition: all .15s ease-in-out;
 }
 
+.profile-link:hover {
+	color: #f1b124;
+}
+
 .navbar {
 	background-color: #ddf1ef;
 }
@@ -380,6 +384,14 @@ footer i:hover {
 
 #add-product-form > div {
 	margin-top: 1rem;
+}
+
+/* delete product */
+
+.delete-form {
+	background-color: white;
+	border-radius: 0.25rem;
+	border: 1px solid #24857c;
 }
 
 @media only screen and (max-width: 576px) {

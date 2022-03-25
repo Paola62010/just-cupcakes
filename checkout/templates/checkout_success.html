@@ -7,7 +7,9 @@
     <section>
         <div class="container px-4 mt-4 d-flex justify-content-end align-items-baseline">
             {% if user.is_authenticated %}
-            <p class="me-3">Hi <strong>{{user.username}}</strong>!</p>
+            <a href="{% url 'profile' %}" class="profile-link">
+                <p class="me-3">Hi <strong>{{user.username}}</strong>!</p>
+            </a>
             {% endif %}
             <div>
                 <a href="{% url 'bag' %}">

@@ -7,7 +7,9 @@
     <section>
         <div class="container px-4 mt-4 d-flex justify-content-end align-items-baseline">
             {% if user.is_authenticated %}
-            <p class="me-3">Hi <strong>{{user.username}}</strong>!</p>
+            <a href="{% url 'profile' %}" class="profile-link">
+                <p class="me-3">Hi <strong>{{user.username}}</strong>!</p>
+            </a>
             {% endif %}
             <div>
                 <a href="{% url 'bag' %}">
@@ -18,7 +20,7 @@
                 </a>
             </div>
         </div>
-        <h1 class="text-center my-3">Products</h1>
+        <h1 class="text-center my-3">Our Products</h1>
         <div class="container mb-3">
             <!--Product sorting-->
             <div class="text-center text-sm-end">
@@ -48,7 +50,7 @@
                 </p>
             </div>
         </div>
-        <div class="my-sm-5">
+        <div class="mb-5 my-sm-5">
             <!--Product cards-->
             <div class="container product-card-container">
                 {% if products|length == 0 %}
@@ -58,7 +60,7 @@
                     <p class="text-center">Please try a new search.</p>
                 </div>
                 {% endif %}
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-5">
                     {% for product in products %}
                     <div class="col product-card">
                         <a href="{% url 'product_detail' product.slug %}">
@@ -80,7 +82,7 @@
                                         <a href="{% url 'edit_product' product.slug %}">
                                             <button type="button" class="btn btn-sm sitebutton">Edit</button>
                                         </a>
-                                        <a href="#">
+                                        <a class="ms-2" href="{% url 'delete_product' product.slug %}">
                                             <button type="button" class="btn btn-sm sitebutton">Delete</button>
                                         </a>
                                     </div>

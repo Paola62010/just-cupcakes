@@ -1,3 +1,4 @@
+from re import template
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse
 from .models import Product, Category
@@ -128,6 +129,29 @@ def edit_product(request, slug):
     context = {
         'product': product,
         'form': form,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def delete_product(request, slug):
+    """ View to delete an existing product."""
+    if not request.user.is_superuser:
+        messages.error(request, ('Sorry, you do not have '
+                                 'privileges to access this '
+                                 'page.'))
+        return redirect(reverse('home'))
+
+    product = get_object_or_404(Product, slug=slug)
+    if request.method == 'POST':
+        product.delete()
+        messages.success(request, 'Product deleted!')
+        return redirect(reverse('products'))
+
+    template = 'delete_product.html'
+    context = {
+        'product': product,
     }
 
     return render(request, template, context)
