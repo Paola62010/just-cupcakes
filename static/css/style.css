@@ -426,6 +426,40 @@ footer i:hover {
 	border: 1px solid #24857c;
 }
 
+/* 404 page */
+
+.div-404 {
+	background-color: white;
+	border-radius: 0.25rem;
+	border: 1px solid #24857c;
+}
+
+.cupcake-icon-404 {
+	width: 35px;
+	height: 35px;
+	vertical-align: baseline;
+}
+
+/* about page */
+
+.box-img {
+	width: 100%;
+	max-height: 450px;
+	object-fit: cover;
+}
+
+.card {
+	border: 1px solid #ddf1ef;
+}
+
+.contact-info p {
+	color: #f1b124;
+}
+
+.contact-info span {
+	color: #24857c;
+}
+
 @media only screen and (max-width: 576px) {
 	.detail-image {
 		height: 300px;

@@ -14,6 +14,11 @@ def home(request):
     return render(request, 'index.html')
 
 
+def about(request):
+    """A view to render the about page"""
+    return render(request, 'about.html')
+
+
 def view_products(request):
     """A view to show all available products"""
 
@@ -155,3 +160,7 @@ def delete_product(request, slug):
     }
 
     return render(request, template, context)
+
+
+def handler404(request, exception):
+    return render(request, "404.html", status=404)

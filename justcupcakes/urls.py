@@ -30,3 +30,6 @@ urlpatterns = [
         RedirectView.as_view(url=staticfiles_storage.url('favicon.ico')),
     ),
 ]
+
+# Custom error pages
+handler404 = 'store.views.handler404'
