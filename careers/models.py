@@ -1,4 +1,6 @@
 from django.db import models
+from django.core.validators import FileExtensionValidator
+from cloudinary.models import CloudinaryField
 
 
 class jobCategory(models.Model):
@@ -29,7 +31,10 @@ class jobApplication(models.Model):
     name = models.CharField(max_length=80)
     last_name = models.CharField(max_length=80)
     phone = models.CharField(max_length=20)
-    resume = models.FileField(upload_to='applications', blank=False)
+    email = models.EmailField(max_length=250, null=True)
+    message = models.TextField(blank=True, null=True)
+    resume = CloudinaryField(blank=False,
+                             resource_type="auto")
     created_on = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

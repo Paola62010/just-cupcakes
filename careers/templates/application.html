@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 
-<main class="container">
+<main>
     <div class="container mt-4 d-flex justify-content-end align-items-baseline">
         {% if user.is_authenticated %}
         <a href="{% url 'profile' %}" class="profile-link">
@@ -19,19 +20,13 @@
             </a>
         </div>
     </div>
-    <h1 class="text-center my-3">Job Postings</h1>
-    <!--Job postings-->
-    <div class="container my-5">
-        {% for posting in postings %}
-        <div class="job-post-div shadow">
-            <h3>{{ posting.title }}</h3>
-            <h5>Job Description:</h5>
-            <p>{{ posting.description }}</p>
-            <h5>Experience:</h5>
-            <p>{{ posting.experience }}</p>
-            <a href="{% url 'application' posting.id %}" class="btn sitebutton">Apply</a>
-        </div>
-        {% endfor %}
+    <h1 class="text-center my-3">{{ posting.title }}</h1>
+    <div class="container">
+        <form class="mb-5 application-form" action="{% url 'application' posting.id %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button class="btn sitebutton mt-5">Submit</button>
+        </form>
     </div>
 </main>
 
