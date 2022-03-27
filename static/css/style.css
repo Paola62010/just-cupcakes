@@ -496,6 +496,29 @@ input[type=file]::file-selector-button:hover {
 	color: white;
 }
 
+/* Mailchimp */
+
+#mc_embed_signup {
+	background: white;
+	border-radius: 0.25rem;
+	border: 1px solid #24857c;
+	clear: left;
+	font: inherit;
+}
+
+#mc_embed_signup .button {
+	background-color: #ddf1ef;
+	color: #24857c;
+	border: 1px solid #24857c;
+	font-size: inherit;
+	transition: color .15s ease-in-out, background-color .15s ease-in-out;
+}
+
+#mc_embed_signup .button:hover {
+	color: white;
+	background-color: #24857c;
+}
+
 @media only screen and (max-width: 576px) {
 	.detail-image {
 		height: 300px;

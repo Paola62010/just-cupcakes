@@ -13,7 +13,7 @@
         <div>
             <a href="{% url 'bag' %}">
                 <button class="btn bag-button">
-                    <i class="bi bi-cart-fill"></i> 
+                    <i class="bi bi-bag-fill"></i> 
                     {% if grand_total != 10 %} € {{grand_total|floatformat:2}} {% else %} € 0.00 {% endif %}
                 </button>
             </a>
