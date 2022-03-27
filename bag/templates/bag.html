@@ -47,15 +47,15 @@
                         <tbody>
                             {% for item in bag_items %}
                           <tr>
-                            <td class="p-3">
+                            <td class="pe-0 p-sm-3">
                                 <img class="img-fluid rounded table-img" src="{{ item.product.image.url }}" alt="{{ item.product.name }} cupcake image">
                             </td>
-                            <td class="p-3">
+                            <td class="px-0 p-sm-3">
                                 <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                                 <p class="my-0 text-muted">(12 cupcakes)</p>
                                 <p class="my-0 text-muted">€ {{ item.product.price }}</p>
                             </td>
-                            <td class="p-3">
+                            <td class="px-0 p-sm-3">
                                 <!--Quantity form-->
                                 <form action="{% url 'bag_edit' item.item_id %}" method="POST" class="update-qty-form mb-2">
                                     {% csrf_token %}
@@ -73,7 +73,7 @@
                                 </form>
                                 <a class="refresh-link pt-3">Update</a>
                             </td>
-                            <td class="p-3">
+                            <td class="px-0 p-sm-3">
                                 <p class="my-0">€ {{ item.product.price | calc_subtotal:item.quantity}}</p>
                                  <!--Remove from bag form-->
                                  <form action="{% url 'bag_remove' item.item_id %}" method="POST">
