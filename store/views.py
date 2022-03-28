@@ -9,16 +9,6 @@ from django.contrib.auth.decorators import login_required
 from .forms import ProductForm
 
 
-def home(request):
-    """A view to render the home page"""
-    return render(request, 'index.html')
-
-
-def about(request):
-    """A view to render the about page"""
-    return render(request, 'about.html')
-
-
 def view_products(request):
     """A view to show all available products"""
 
