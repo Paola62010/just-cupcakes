@@ -9,167 +9,167 @@
 
 <url>
   <loc>https://just-cupcakes.herokuapp.com/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://just-cupcakes.herokuapp.com/about/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://just-cupcakes.herokuapp.com/careers/job_postings/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://just-cupcakes.herokuapp.com/products/?category=classic-flavours</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <loc>https://just-cupcakes.herokuapp.com/store/products/?category=classic-flavours</loc>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://just-cupcakes.herokuapp.com/products/?category=limited-editions</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <loc>https://just-cupcakes.herokuapp.com/store/products/?category=limited-editions</loc>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://just-cupcakes.herokuapp.com/products/?category=monthly-cupcake</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <loc>https://just-cupcakes.herokuapp.com/store/products/?category=monthly-cupcake</loc>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://just-cupcakes.herokuapp.com/products/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <loc>https://just-cupcakes.herokuapp.com/store/products/</loc>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://just-cupcakes.herokuapp.com/accounts/login/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://just-cupcakes.herokuapp.com/accounts/signup/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://just-cupcakes.herokuapp.com/mybag/bag/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://just-cupcakes.herokuapp.com/careers/application/1</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://just-cupcakes.herokuapp.com/careers/application/2</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://just-cupcakes.herokuapp.com/products/carrot/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <loc>https://just-cupcakes.herokuapp.com/store/products/carrot/</loc>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://just-cupcakes.herokuapp.com/products/cherry/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <loc>https://just-cupcakes.herokuapp.com/store/products/cherry/</loc>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://just-cupcakes.herokuapp.com/products/chocolate-orange/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <loc>https://just-cupcakes.herokuapp.com/store/products/chocolate-orange/</loc>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://just-cupcakes.herokuapp.com/products/coffee/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <loc>https://just-cupcakes.herokuapp.com/store/products/coffee/</loc>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://just-cupcakes.herokuapp.com/products/dark-chocolate/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <loc>https://just-cupcakes.herokuapp.com/store/products/dark-chocolate/</loc>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://just-cupcakes.herokuapp.com/products/hazelnut/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <loc>https://just-cupcakes.herokuapp.com/store/products/hazelnut/</loc>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://just-cupcakes.herokuapp.com/products/lemon-blueberry/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <loc>https://just-cupcakes.herokuapp.com/store/products/lemon-blueberry/</loc>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://just-cupcakes.herokuapp.com/products/lemon-meringue/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <loc>https://just-cupcakes.herokuapp.com/store/products/lemon-meringue/</loc>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://just-cupcakes.herokuapp.com/products/milk-chocolate/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <loc>https://just-cupcakes.herokuapp.com/store/products/milk-chocolate/</loc>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://just-cupcakes.herokuapp.com/products/mint-chocolate/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <loc>https://just-cupcakes.herokuapp.com/store/products/mint-chocolate/</loc>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://just-cupcakes.herokuapp.com/products/oreo/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <loc>https://just-cupcakes.herokuapp.com/store/products/oreo/</loc>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://just-cupcakes.herokuapp.com/products/red-velvet/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <loc>https://just-cupcakes.herokuapp.com/store/products/red-velvet/</loc>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://just-cupcakes.herokuapp.com/products/salted-caramel/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <loc>https://just-cupcakes.herokuapp.com/store/products/salted-caramel/</loc>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://just-cupcakes.herokuapp.com/products/strawberry-cheesecake/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <loc>https://just-cupcakes.herokuapp.com/store/products/strawberry-cheesecake/</loc>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://just-cupcakes.herokuapp.com/products/triple-chocolate/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <loc>https://just-cupcakes.herokuapp.com/store/products/triple-chocolate/</loc>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://just-cupcakes.herokuapp.com/products/unicorn/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <loc>https://just-cupcakes.herokuapp.com/store/products/unicorn/</loc>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://just-cupcakes.herokuapp.com/products/vanilla/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <loc>https://just-cupcakes.herokuapp.com/store/products/vanilla/</loc>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://just-cupcakes.herokuapp.com/products/easter/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <loc>https://just-cupcakes.herokuapp.com/store/products/easter/</loc>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://just-cupcakes.herokuapp.com/products/valentine/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <loc>https://just-cupcakes.herokuapp.com/store/products/valentine/</loc>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://just-cupcakes.herokuapp.com/products/pina-colada/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <loc>https://just-cupcakes.herokuapp.com/store/products/pina-colada/</loc>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://just-cupcakes.herokuapp.com/accounts/password/reset/</loc>
-  <lastmod>2022-03-27T10:37:41+00:00</lastmod>
+  <lastmod>2022-03-28T13:56:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
