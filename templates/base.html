@@ -138,7 +138,7 @@
               <a class="privacy-policy-link" href="https://www.privacypolicygenerator.info/live.php?token=SicAe1NrkwtD4HfrKcEHts0gU1O09gyE" target="_blank">Privacy Policy</a>             
             </div>
             <div class="text-center text-white">
-                <p>Copyright © Just Cupcakes {% now 'Y' %}</p>
+                <p>Copyright &copy; Just Cupcakes {% now 'Y' %}</p>
             </div>
         </div>
     </footer>
@@ -152,8 +152,8 @@
             let alert = new bootstrap.Alert(messages);
             alert.close()
         }, 3000);
-  </script>
-    {% block postloadjs %}
-    {% endblock %}
+    </script>
+{% block postloadjs %}
+{% endblock %}
 </body>
 </html>

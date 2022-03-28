@@ -12,11 +12,9 @@
             </a>
             {% endif %}
             <div>
-                <a href="{% url 'bag' %}">
-                    <button class="btn bag-button">
-                        <i class="bi bi-bag-fill"></i> 
-                        {% if grand_total != 10 %} € {{grand_total|floatformat:2}} {% else %} € 0.00 {% endif %}
-                    </button>
+                <a class="btn bag-button" href="{% url 'bag' %}">
+                    <i class="bi bi-bag-fill"></i>
+                    {% if grand_total != 10 %} € {{grand_total|floatformat:2}} {% else %} € 0.00 {% endif %}
                 </a>
             </div>
         </div>
@@ -63,9 +61,10 @@
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-5">
                     {% for product in products %}
                     <div class="col product-card">
-                        <a href="{% url 'product_detail' product.slug %}">
+                        
                         <div class="card shadow h-100 product-card-body">
-                            <img src="{{product.image.url}}" class="card-img-top card-image" alt="{{product.name}} cupcake image">
+                            <a href="{% url 'product_detail' product.slug %}">
+                            <img src="{{product.image.url}}" class="card-img-top card-image" alt="{{product.name}} cupcake image"></a>
                             {% if product.popular %}
                                 <p class="card-text text-end m-0 fw-bold popular">Popular</p>
                             {% endif %}
@@ -77,20 +76,16 @@
                                 {% endif %}
                                 {% if user.is_superuser%}
                                 <!--Edit and delete buttons for superuser-->
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="{% url 'edit_product' product.slug %}">
-                                            <button type="button" class="btn btn-sm sitebutton">Edit</button>
-                                        </a>
-                                        <a class="ms-2" href="{% url 'delete_product' product.slug %}">
-                                            <button type="button" class="btn btn-sm sitebutton">Delete</button>
-                                        </a>
+                                <div>
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <a class="d-block adminbtn btn btn-sm" href="{% url 'edit_product' product.slug %}">Edit</a>
+                                        <a class=" d-block adminbtn ms-2 btn btn-sm" href="{% url 'delete_product' product.slug %}">Delete</a>
                                     </div>
                                 </div>
-                              {% endif %}
+                                {% endif %}
                             </div>
                         </div>
-                        </a>
+                        
                     </div>
                     {% endfor %}
                 </div>

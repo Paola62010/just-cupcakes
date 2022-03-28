@@ -20,15 +20,15 @@ class UserProfileForm(forms.ModelForm):
             'default_address_line2': 'Address line 2',
             'default_post_code': 'Post Code',
             'default_county': 'County',
-            'default_country': 'Country',
         }
 
         self.fields['default_phone'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            if self.fields[field].required:
-                placeholder = f'{placeholders[field]} *'
-            else:
-                placeholder = placeholders[field]
-            self.fields[field].widget.attrs['placeholder'] = placeholder
+            if field != 'default_country':
+                if self.fields[field].required:
+                    placeholder = f'{placeholders[field]} *'
+                else:
+                    placeholder = placeholders[field]
+                self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'profile-update-inputs'
             self.fields[field].label = False

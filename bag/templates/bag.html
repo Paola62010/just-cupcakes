@@ -64,7 +64,7 @@
                                             <div class="input-group-append">
                                                 <button class="btn plus-qty mx-1 plus-qty_{{ item.item_id }}" data-item_id="{{item.item_id}}">+</button>
                                             </div>
-                                            <input data-item_id="{{ item.item_id }}" class="id_qty_{{ item.item_id }} qty_input form-control text-center qty-input" id="quantity" name="quantity" type="num" value="{{item.quantity}}" min="1" max="10"/>
+                                            <input data-item_id="{{ item.item_id }}" class="id_qty_{{ item.item_id }} qty_input form-control text-center qty-input" id="quantity" name="quantity" type="number" value="{{item.quantity}}" min="1" max="10"/>
                                             <div class="input-group-prepend">
                                                 <button class="btn minus-qty mx-1 minus-qty_{{ item.item_id }}" data-item_id="{{item.item_id}}">-</button>
                                             </div>
@@ -87,7 +87,7 @@
                           
                           {% endfor %}
                           <tr>
-                              <td colspan="5" class="text-end py-3">
+                              <td colspan="4" class="text-end py-3">
                                   <p class="m-0"><strong>Bag Total: € {{ total|floatformat:2 }}</strong></p>
                                   <p class="m-0">Delivery: € {{ delivery|floatformat:2 }}</p>
                                   <p class="m-0"><strong>Grand Total: € {{ grand_total|floatformat:2 }}</strong></p>
@@ -105,8 +105,8 @@
                             <i class="bi bi-arrow-left-circle-fill icons" id="back-arrow"></i> KEEP SHOPPING
                         </a>
                     </div>
-                        <a href="{% url 'checkout' %}" class="checkout-button">
-                            <button class="btn sitebutton"><i class="bi bi-lock-fill lock-icon"></i> CHECKOUT</button></a>
+                        <a href="{% url 'checkout' %}" class="checkout-button btn sitebutton pb-0">
+                        <i class="bi bi-lock-fill lock-icon"></i> CHECKOUT</a>
                 </div>
             </div>
             {% endif %}

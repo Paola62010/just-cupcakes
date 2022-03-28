@@ -13,11 +13,9 @@
             </a>
             {% endif %}
             <div>
-                <a href="{% url 'bag' %}">
-                    <button class="btn bag-button">
-                        <i class="bi bi-bag-fill"></i> 
-                        {% if grand_total != 10 %} € {{grand_total|floatformat:2}} {% else %} € 0.00 {% endif %}
-                    </button>
+                <a class="btn bag-button" href="{% url 'bag' %}">
+                    <i class="bi bi-bag-fill"></i>
+                    {% if grand_total != 10 %} € {{grand_total|floatformat:2}} {% else %} € 0.00 {% endif %}
                 </a>
             </div>
         </div>
@@ -77,7 +75,7 @@
               {% if user.is_authenticated %}
               <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="id-save-info" name="save-info">
-                <label class="form-check-label" for="save-info">Save these details to your profile.</label>
+                <label class="form-check-label" for="id-save-info">Save these details to your profile.</label>
               </div>
               {% else %}
 				<div>

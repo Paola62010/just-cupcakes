@@ -11,11 +11,9 @@
             </a>
             {% endif %}
             <div>
-                <a href="{% url 'bag' %}">
-                    <button class="btn bag-button">
-                        <i class="bi bi-bag-fill"></i>
-                        {% if grand_total != 10 %} € {{grand_total|floatformat:2}} {% else %} € 0.00 {% endif %}
-                    </button>
+                <a class="btn bag-button" href="{% url 'bag' %}">
+                    <i class="bi bi-bag-fill"></i>
+                    {% if grand_total != 10 %} € {{grand_total|floatformat:2}} {% else %} € 0.00 {% endif %}
                 </a>
             </div>
         </div>
@@ -85,7 +83,7 @@
         <div class="optionalParent">
             <div class="clear foot">
                 <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn sitebutton">
-                <p class="brandingLogo"><a href="http://eepurl.com/hX_jpD" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>
+                <p class="brandingLogo"><a href="http://eepurl.com/hX_jpD" title="Mailchimp - email marketing made easy and fun"><img alt="Mailchimp logo" src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>
             </div>
         </div>
     </div>
