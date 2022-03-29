@@ -44,7 +44,7 @@ Authentication and account
 
 Search and Sort
 
-- As a Site User I want to be able to sort the list of available cupcakes so that I can view the results ordered by price, popularity, date (able to see newest items).
+- As a Site User I want to be able to sort the list of available cupcakes so that I can view the results ordered by price, date, name and category.
 - As a Site User I want to be able to search the available cupcakes by name and description so that I can find the ones I am interested in. 
 - As a Site User I want to be able to easily see what I have searched for and the number of results so that I can quickly decide if what I am looking for is available. 
 
@@ -54,7 +54,7 @@ Order and checkout
 - As a Site User I want to be able to view the items I selected in my bag so that I can see the total price and I can make sure I have selected the correct items and related quantity. 
 - As a Site User I want to be able to adjust the quantity of the items in my bag so that I can make the required changes before proceeding with the payment. 
 - As a Site User I want to easily enter my payment information so that I can checkout quickly. 
-- As a registered Site Use I want to be able to save my payment information when creating an order so that they can be used for a future purchase. 
+- As a registered Site Use I want to be able to save my delivery information when creating an order so that they can be used for a future purchase. 
 - As a Site User I want to view an order summary and confirmation after checkout so that I can verify there are no mistakes in my purchase. 
 - As a Site User I want to receive a confirmation email after placing the order so that I can verify that the order was successful and I can keep a written record of my purchase. 
 
