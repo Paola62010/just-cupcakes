@@ -172,32 +172,465 @@ Admin
 
 ## Manual Testing 
 
+### Navigation menu and footer 
+
+1. Navigation menu 
+
+- Verify that on smaller screens the main navigation menu collapses into a burger menu. 
+
+- Click on the logo on the left side of the navigation menu and verify that you are redirected to the home page. 
+
+- For non authenticated users, verify that the "Account" dropdown only contains options "login" and "registered".
+
+- For authenticated users, verify that the "Account" dropdown contains only options "profile" and "logout".
+
+- For authenticated Admin users, verify that the main navigation menu also has option "Management". 
+
+- Click on all the links in the navigation menu (first as a normal user then as an Admin) and verify that you are redirected to the correct pages. 
+
+- On the search field, leave the field empty and click on the "search" button. Verify that an error is displayed advising to fill the required field. 
+
+- Enter something in the search field (for example: chocolate) and click on the "search" button. Verify that you are redirected to the products page. 
+
+2. Footer 
+
+- Hover over the links in the footer and verify that they change color. 
+
+- Click on each of the social media links and verify that you are redirected (in a new page) to the correct social media pages. 
+
+- Click on the "privacy policy" link and verify that you are redirected (in a new page) to the privacy policy for Just Cupcakes. 
+
 ### Authentication
+
+1. Registration 
+
+- Click on the "Account" dropdown in the main navigation menu and verify that only options "Login" and "Register" are displayed.
+
+- Click on "Register" and verify that you are redirected to the sign up page. 
+
+- Try to submit the sign up form without filling the required information and verify that the form is not submitted and a message is shown asking to fill in the required fields.
+
+- Try to submit the form with invalid input, for example incorrect email format, and verify that the form is not submitted and a message is shown pointing to the issue. 
+
+- Try to submit the form with invalid pasword (4 digits password for example, which is too short) and verify that an error message is shown pointing to the issue. 
+
+- Try to submit the form with an email address that already has an account and verify that an error message is displayed pointing to the issue. 
+
+- Fill in all the required fields with correct details and verify that you are redirected to the confirm email page where a message is shown advising on the verification process.
+
+- Check your email inbox and verify that that you have received an email with the verification link. Click on the verification link and check that you are redirected to the confirm email page. 
+
+- In the confirm email page, click on th confirm button and verify that you are redirected to the login page and that a success message is displayed on top of the page. Proceed to login. 
+
+2. Login
+
+- Click on the "Account" dropdown in the main navigation menu and verify that only options "login" and "register" are displayed.
+
+- Click on "login" and verify that you are redirected to the login page. 
+
+- Try to submit the login form with incorrect credentials and verify that the form is not submitted and an error is displayed pointing to the issue. 
+
+- Now submit the form with correct credentials and verify that you are redirected to the home page. 
+
+- Verify that now you are able to see a link with your username next to the bag button on the top right corner of the page. 
+
+- Click on the "Account" dropdown in the main navigation menu and verify that now you see options "profile" and "logout".
+
+- If you an Admin user, verify that now the main navigation menu is also displaying the "Management" option.
+
+3. Logout 
+
+- Click on the "Account" dropdown in the main navigation menu and verify that only options "Profile" and "Logout" are displayed. 
+
+- Click on the "logout" link in the "Account" dropdown menu and verify that you are redirected to the logout page. 
+
+- Verify that a message is displayed asking to confirm whether you would like to log out. 
+
+- Hover over the "sign out" button and verify that it changes colour. Click on it and verify that you are redirected to the home page, the link displaying your username next to the bag button is no longer available. 
 
 ### Home Page
 
+1. Bag button 
+
+- Hover over the bag button and verify that it changes color. 
+
+- Click on the bag button on the top right corner of the page and verify that you are redirected to the bag page. 
+
+2. Welcome section 
+
+- Just below the company overview which is next to the cupcakes image, you will see a "shop now" button. Hover over the button and verify that it changes color. 
+
+- Click on the button and verify that you are redirected to the products page. 
+
+3. Call to action cards
+
+- Below the welcome sections you will see 3 cards, each containing a call to action and a button. Hover over the buttons and verify that they change color.  
+
+- "Fast deliveries" card: click on the "Go" button and verify that you are redirected to the products page, which will be displaying all products. 
+
+- "Visit us in store" card: click on the "Go" button and verify that you are redirected to the about page.
+
+- "New flavours" card: click on the "Go" button and verify that you are redirected to the products page, which will be displaying only one result for the monthly cupcake. 
+
+4. Newsletter form
+
+- At the bottom of the page you will find the newsletter form. Hover over the button and verify that it change color. 
+
+- Click on the "Subscribe" button without entering anything and verify that an error is displayed asking to fill in the required field. 
+
+- Now try submitting the form with an invalid email address format and verify that an error is displayed pointing to the issue. 
+
+- Try submitting the form with a valid email address and verify that a success message appears confirming that you have subscribed. 
+
+#### Home Page finished site 
+
+![Home Page finished site - 1](readme-testing-images/finished-project/complete-home1.png)
+![Home Page finished site - 2](readme-testing-images/finished-project/complete-home2.png)
+
 ### About Page
+
+1. Bag button 
+
+- Hover over the bag button and verify that it changes color. 
+
+- Click on the bag button on the top right corner of the page and verify that you are redirected to the bag page. 
+
+2. Map 
+
+- At the bottom of the page there is map displaying the bakery's location. Check that the map is pointing to the correct address. 
+
+- Click on the plus and minus signs and verify that you can zoom in and out. 
+
+- Click and drag on the map and verify that you are able to move the map. 
+
+- Click on the "view larger map" and "directions" links and verify that you are redirected to Google maps on a separate page. 
+
+- Click on the small quare on the bottom left corner on the map ("show satellite imagerys") to change to satelite view. 
+
+#### About Page finished site 
+
+![About Page finished site - 1](readme-testing-images/finished-project/complete-about1.png)
+![About Page finished site - 2](readme-testing-images/finished-project/complete-about2.png)
 
 ### Products Page
 
-### Product Details Pages
+1. Bag button 
+
+- Hover over the bag button and verify that it changes color. 
+
+- Click on the bag button on the top right corner of the page and verify that you are redirected to the bag page. 
+
+2. Product cards grid
+
+- On the main navigation menu, click on the "shop" dropdown and click on all the available options ("classic flavours", "limited editions", "monthly cupcake", "all cupcakes").
+
+- Verify that each time the products returned on the products page match the selected category ("all cupcakes" will return all products). 
+
+3. Products link 
+
+- Just above the product cards grid, there is a "Products" link. Click on it and verify that it redirects to the products page returning all products. Verify that the number of products is shown next to the link.  
+
+- When selecting a cupcake category, verify that next to the link you can also see the category name in addition to the number of products. 
+
+- Go to the search bar in the main navigation menu and perform a seach (for example: "coffee"). Verify that next to the link you can also see the term you have searched for in addition to the number of products. 
+
+4. Product card
+
+- Hover over the cards and verify that the card body changes color. 
+
+- Verify that for each products you can see the name, price and category tag. 
+
+- Click on the product image and verify that you are redirected to the product details page for the selected cupcake. 
+
+- Verify that the text "popular" is displayed on the picture of the applicable cupcakes (this will be shown if the popular checkbox has been selected during product creation or update). 
+
+5. Sort dropdown
+
+- Above the product cards grid, on the right, we can see the sort dropdown menu. 
+
+- Click on the menu and select price, first in ascending then descending order, and verify that the products are displayed accordingly. 
+
+- Click on the menu and select date, first in ascending then descending order, and verify that the products are displayed accordingly. 
+
+- Click on the menu and select name, first in ascending then descending order, and verify that the products are displayed accordingly. 
+
+- Click on the menu and select category, first in ascending then descending order, and verify that the products are displayed accordingly. 
+
+#### Products Page finished site 
+
+![Products Page finished site - 1](readme-testing-images/finished-project/complete-products1.png)
+![Products Page finished site - 2](readme-testing-images/finished-project/complete-products2.png)
+
+### Product Details Page
+
+1. Bag button 
+
+- Hover over the bag button and verify that it changes color. 
+
+- Click on the bag button on the top right corner of the page and verify that you are redirected to the bag page. 
+
+2. Product details 
+
+- Verify that the product information is displayed correctly and includes the name, sku, price, description and category tag. 
+
+- Click on the category tag and verify that you are redirected to the products page which displays all products for that specific category. 
+
+- Below the price description we can see the quantity selector. Verify that the quantity is 1 by default. Click on the plus and minus signs and verify that the quantity is increased and decreased respectively. 
+
+- Verify that the minus sign button is greyed out when the quantity is 1. Verify that the plus sign button is greyed out when the quantity is 10. 
+
+- Enter the quantity manually and try to add a value that is less than 1 or more than 10. Verify that you get an error message advising that the value should be greater or equal than 1, or less or equal than 10.
+
+- Hover over the "add to bag" button and verify that it changes color. Click on the button and verify that a success message appears and that the amount shown in the bag button has been updated correctly. 
+
+- Click on the "keep shopping" link below the quantity selector and verify that it redirects to the products page (all products returned).
+
+#### Products Details Page finished site 
+
+![Products Details Page finished site](readme-testing-images/finished-project/complete-product_details.png)
 
 ### Add Product Page
 
+1. Bag button 
+
+- Hover over the bag button and verify that it changes color. 
+
+- Click on the bag button on the top right corner of the page and verify that you are redirected to the bag page. 
+
+2. Add product form 
+
+- Try to submit the form without filling in the required fields. Verify that the form is not submitted and that a message is displayed asking to fill in the required fields. 
+
+- Try to submit the form with an invalid price (over 6 digits). Verify that the form is not submitted, a generic error message is displayed on top of the page and a more specific error is returned below price field. 
+
+- Now submit the form with all the required details and valid inputs. Verify that a success message appears on top of the page and that you are redirected to the product details page displaying the product you have just created. 
+
+#### Add Product Page finished site 
+
+![Add Product Page finished site - 1](readme-testing-images/finished-project/complete-add_product1.png)
+![Add Product Page finished site - 2](readme-testing-images/finished-project/complete-add_product2.png)
+
 ### Edit Product Page
+
+1. Bag button 
+
+- Hover over the bag button and verify that it changes color. 
+
+- Click on the bag button on the top right corner of the page and verify that you are redirected to the bag page. 
+
+2. Edit product form
+
+- Try to submit the form removing the inputs in the required fields. Verify that the form is not submitted and that a message is displayed asking to fill in the required fields. 
+
+- Try to submit the form with an invalid price (over 6 digits). Verify that the form is not submitted, a generic error message is displayed on top of the page and a more specific error is returned below price field. 
+
+- Now submit the form with all the required details and valid inputs. Verify that a success message appears on top of the page and that you are redirected to the product details page displaying the product you have just updated.
+
+#### Edit Product Page finished site 
+
+![Edit Product Page finished site - 1](readme-testing-images/finished-project/complete-edit_product1.png)
+![Edit Product Page finished site - 2](readme-testing-images/finished-project/complete-edit_product2.png)
 
 ### Delete Product Page
 
+1. Bag button 
+
+- Hover over the bag button and verify that it changes color. 
+
+- Click on the bag button on the top right corner of the page and verify that you are redirected to the bag page. 
+
+2. Delete product form 
+
+- Click on the "delete product" button. Verify that you are redirected to the products page and that a success message appears on top of the page. 
+
+- Verify that the product you have deleted is no longer displayed on the products page. 
+
+#### Delete Product Page finished site 
+
+![Delete Product Page finished site](readme-testing-images/finished-project/complete-delete_product.png)
+
 ### Bag page 
+
+1. Bag button 
+
+- The bag button is present on the bag page as well, showing the amount of the items in the bag, but in this case it is not a link to the bag page as we are already there. 
+
+2. Bag table
+
+- If the bag is empy, verify that you are presented with a message informing you that the bag is currently empty, and a "keep shopping" button. Click on the "keep shopping" button and verify that it redirects to the products page (all products returned).
+ 
+- If there are products in the bag, verify that the correct information is shown in the table, including: image, product name and price, quantity and subtotal. 
+
+- The quantity field has quantity selector to update the product quantity. Click on the plus and minus signs and verify that the quantity is increased and decreased respectively. 
+
+- Verify that the minus sign button is greyed out when the quantity is 1. Verify that the plus sign button is greyed out when the quantity is 10. 
+
+- Enter the quantity manually and try to add a value that is less than 1 or more than 10. Verify that you get an error message advising that the value should be greater or equal than 1, or less or equal than 10.
+
+- Update the quantity to a valid value and click on the "Update" link. Verify that a success message is displayed, the prices in the table and in the bag button are updated correctly. 
+
+- Under the subtotal for each item, we have a "bin" button. Click on the button to remove the item from the bag. Verify that a success message is displyed and that the item is no longer in the bag. 
+
+- If the bag total is less than 50 euro, a delivery cost of 10 euro is applied. Verify that the delivery cost is applied correctly for orders that are less than 50 euro. 
+
+- If the bag total is less than 50 euro, verify that a yellow text appears under the grand total, informing the user on how much more they should spend to get a free delivery. 
+
+- Under the table there is a "keep shopping" button on the left. Click on it and verify that it redirects to the products page (all products returned).
+
+- Under the table, on the right, there is a "checkout" button. Click on it and verify that it redirects to the checkout page. 
+
+#### Bag Page finished site 
+
+![Bag Page finished site](readme-testing-images/finished-project/complete-bag.png)
 
 ### Checkout Page
 
+1. Bag button 
+
+- Hover over the bag button and verify that it changes color. 
+
+- Click on the bag button on the top right corner of the page and verify that you are redirected to the bag page. 
+
+2. Checkout form
+
+- Verify that as an authenticated user you are able to see the "Save these details to your profile" checkbox. 
+
+- Verify that as a non authenticated user the "Save these details to your profile" checkbox is not available, instead you will see links to login or register. Click on the links and verify that they redirect to the correct pages. 
+
+- Try to submit the form without entering the required fields for the "Order Details" section and verify that the form is not submitted. 
+
+- Try to submit the form with invalid inputs (as example, invalid email format) and verify that the form is not submitted and a message is displayed pointing to the issue.
+
+3. Payment details 
+
+- Try to submit the form without the payment details or with incorrect payment details and verify that an error is displayed. The error message will display, in red, under the card number field.  
+
+- Now submit the form with valid card information. Test using different cards to test different scenarios. Card details can be found [here](https://stripe.com/docs/testing). 
+
+- Test using a card that requires additional authentication (3D Secure authentication section) and verify that a modal from Stripe appears and that you are required to complete authentication to proceed with the payment. 
+
+- Test using cards that will be rejected, as example using the "Generic decline" card. Verify that you are not able to submit the form and that an error message will be returned, in red, under the card field. Test with different cards that will fail to see that the form is not submitted and the relevant message from Stripe is returned. 
+
+- Now test using the card details of a card that will not fail. Verify that you are redirected to the success checkout page and that a success message is displayed. 
+
+- Check your email inbox and verify that you have received an email confirmation for your order. Email should look as below. 
+
+![Order-confirmation](readme-testing-images/order-confirmation-email.png)
+
+- Create an order as an authenticated user and check the "Save these details to your profile" option. After placing the order, click on the "profile" link on the main navigation menu which will redirect you to the profile page. Verify that the delivery details have been updated correctly. 
+
+- To confirm that webhooks were successful for the transactions you have tested for, go to the Stripe dashboard page, then in the Webhooks section check the results for the Just Cupcakes endpoint. 
+
+![Webhooks](readme-testing-images/webhooks.png)
+
+#### Checkout Page finished site 
+
+![Checkout Page finished site - 1](readme-testing-images/finished-project/complete-checkout1.png)
+![Checkout Page finished site - 2](readme-testing-images/finished-project/complete-checkout2.png)
+
 ### Success Checkout Page
+
+1. Bag button 
+
+- Hover over the bag button and verify that it changes color. 
+
+- Click on the bag button on the top right corner of the page and verify that you are redirected to the bag page.
+
+2. Order info 
+
+- Verify that your order number and order date are present. 
+
+- Just above the order info details, verify that you can see the email address used to send the order confirmation email. 
+
+3. Purchased 
+
+- Verify that the correct items that you have ordered are listed here. 
+ 
+4. Delivering to
+
+- Verify that the correct delivery information that was entered during the checkout process is displayed here.  
+
+#### Success Checkout Page finished site 
+
+![Success Checkout Page finished site - 1](readme-testing-images/finished-project/complete-checkout_success1.png)
+![Success Checkout Page finished site - 2](readme-testing-images/finished-project/complete-checkout_success2.png)
 
 ### Profile Page
 
+1. Bag button 
+
+- Hover over the bag button and verify that it changes color. 
+
+- Click on the bag button on the top right corner of the page and verify that you are redirected to the bag page.
+
+2. Default Delivery Info 
+
+- Test with a user that has not saved their delivery information (during the checkout process or via the edit profile page) and verify that all the values are displaying as "(Not set)".
+
+- Test with a user that has saved their delivery info during the checkout process and verify that their default delivery info has been updated accordingly. 
+
+- Just below the "Default Delivery Info", we can see an "Update" button. Hover over it to see it change color like all the buttons on the website. Click on it and verify that you are redirected to the edit profile page. 
+
+3. Past Orders
+
+- Verify that the orders you have placed for a specific user are displayed here. 
+
+- The order numbers are links. Click on them and verify that you are redirected to the "view order" page. This page uses the same template as the checkout success page, the only difference being that an information message pops up when the page opens advising you that you are looking at a confirmation for a past order.
+
+#### Profile Page finished site 
+
+![Profile Page finished site](readme-testing-images/finished-project/complete-profile.png)
+
 ### Edit Profile
+
+1. Bag button 
+
+- Hover over the bag button and verify that it changes color. 
+
+- Click on the bag button on the top right corner of the page and verify that you are redirected to the bag page.
+
+2. Edit profile form 
+
+- Update any of the fields in the form and click on save. Verify that you are redirected to the profile page and that your changes are being displayed correctly. 
+
+#### Edit Profile Page finished site 
+
+![Edit Profile Page finished site](readme-testing-images/finished-project/complete-edit_profile.png)
 
 ### Job Postings Page
 
-### Job Aplication Page
+1. Bag button 
+
+- Hover over the bag button and verify that it changes color. 
+
+- Click on the bag button on the top right corner of the page and verify that you are redirected to the bag page.
+
+2. Job postings 
+
+- Verify that for each job posting the following information is displayed: job title, job description and experience. 
+
+- For each job posting there is an "apply" button. Hover over it and verify that it changes color. Click on it and verify that you are redirected to the job application page. 
+
+#### Job Postings Page finished site 
+
+![Job Postings Page finished site](readme-testing-images/finished-project/complete-job_postings.png)
+
+### Job Application Page
+
+1. Bag button 
+
+- Hover over the bag button and verify that it changes color. 
+
+- Click on the bag button on the top right corner of the page and verify that you are redirected to the bag page.
+
+2. Application form 
+
+- Try to submit the form without filling the required fields and verify that the form is not submittd, an error will show advising to fill in the required fields. 
+
+- Try to submit the form with an invalid email input. Verify that the form is not submitted and that an error is displayed pointing to the issue. 
+
+- Now fill in all the required field with correct values and click on the "submit" button. Verify that you are redirected to the job postings page and that a success message appears on top of the page. 
+
+#### Job Application Page finished site 
+
+![Job Application Page finished site](readme-testing-images/finished-project/complete-application.png)

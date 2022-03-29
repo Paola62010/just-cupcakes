@@ -156,7 +156,7 @@ This page contains a form that allows users to update their current delivery inf
 
 This page contains a list of all the available job openings for the bakery. For each job opening we have job title, description and experience requirements. The "Apply" button will redirects the users to the application page. 
 
-### Job Aplication Page
+### Job Application Page
 
 The application page includes a form that will allow users to enter their information to apply for a position at the bakery. 
 
