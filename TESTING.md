@@ -16,7 +16,7 @@ The following validators were used to check the validity of the website code:
 
 No errors are returned for HTML, JavaScript and CSS. 
 
-For Python, there are 5 errors for "line too long" in the settings.py file, which I did not correct in order not to break the code (errors are for AUTH_PASSWORD_VALIDATORS and STATICFILES_STORAGE). 
+For Python, there are 5 errors for "line too long" in the settings.py file, which I did not correct in order not to break the code (errors are for AUTH_PASSWORD_VALIDATORS and STATICFILES_STORAGE). I don't think there is a way to correct these without breaking the code (the AUTH_PASSWORD_VALIDATORS were already set by Django). 
 
 ## User Stories Testing 
 
@@ -405,6 +405,12 @@ Admin
 
 - Now submit the form with all the required details and valid inputs. Verify that a success message appears on top of the page and that you are redirected to the product details page displaying the product you have just created. 
 
+3. Test role access
+
+- As a non authenticated user, try to access this page by manually entering the url. Verify that you are redirected to the login page. 
+
+- Login as a non admin user and try to access the Url again (https://just-cupcakes.herokuapp.com/store/add_product/). Verify that you are redirected to the home page and that an error message appears on top of the page advising that you do not have privileges to visit this page. 
+
 #### Add Product Page finished site 
 
 ![Add Product Page finished site - 1](readme-testing-images/finished-project/complete-add_product1.png)
@@ -426,6 +432,12 @@ Admin
 
 - Now submit the form with all the required details and valid inputs. Verify that a success message appears on top of the page and that you are redirected to the product details page displaying the product you have just updated.
 
+3. Test role access
+
+- As a non authenticated user, try to access this page by manually entering the url. Verify that you are redirected to the login page. 
+
+- Login as a non admin user and try to access the Url again (as example: https://just-cupcakes.herokuapp.com/store/edit_product/cherry/). Verify that you are redirected to the home page and that an error message appears on top of the page advising that you do not have privileges to visit this page. 
+
 #### Edit Product Page finished site 
 
 ![Edit Product Page finished site - 1](readme-testing-images/finished-project/complete-edit_product1.png)
@@ -444,6 +456,12 @@ Admin
 - Click on the "delete product" button. Verify that you are redirected to the products page and that a success message appears on top of the page. 
 
 - Verify that the product you have deleted is no longer displayed on the products page. 
+
+3. Test role access
+
+- As a non authenticated user, try to access this page by manually entering the url. Verify that you are redirected to the login page. 
+
+- Login as a non admin user and try to access the Url again (as example: https://just-cupcakes.herokuapp.com/store/delete_product/cherry/). Verify that you are redirected to the home page and that an error message appears on top of the page advising that you do not have privileges to visit this page. 
 
 #### Delete Product Page finished site 
 
@@ -634,3 +652,19 @@ Admin
 #### Job Application Page finished site 
 
 ![Job Application Page finished site](readme-testing-images/finished-project/complete-application.png)
+
+## Bugs 
+
+There was an issue in the forms for the Add Product and Edit Product pages which allowed product creation and update without the product image. This would then result in error "The 'image' attribute has no file associated with it" when visiting the Products page, as there were products with no images (which I had created to test the forms). The error was caused by a mistake in my forms.py file, where I had attribute "required" set as False for Image. This should have been True as the image is required as per my Product model. 
+
+### Remaining bugs
+
+The only remaining issue I have noticed is in the form located in the job application page. This is not really a bug but more of a limitation. If the file uploaded for the resume is a pdf file, the form is submitted successfully, and the file name can be seen in the database, in fact if I check the django admin panel the file name is visible. However, the file cannot be opened. This is due to the fact the Cloudinary requires a paid account to host pdf files, and my account is a free account. 
+
+## Additional Testing 
+
+- Site was tested in different browsers and works nicely in all of them: Google Chrome, Safari, Firefox, Microsoft Edge.
+
+- Used different devices for testing including: MacBook Pro, iPad, iPhone 11 Pro and HP Pavillion Notebook. Latest operating system installed on all devices. 
+
+- Extensive use of Google Chrome DevTools to test site perormance and responsiveness. 

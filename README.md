@@ -4,7 +4,9 @@
 
 [View deployed site here](https://just-cupcakes.herokuapp.com/)
 
-Just Cupcakes is a well established bakery based in Dublin. The bakery specializes in high quality cupcakes and offers deliveries everywhere in Ireland. Customers can place orders online, register for an account to have access to a personalised profile page where they can review past orders and save their shipping information for future orders. Store employees can manage product creation, update and cancellation via the website. 
+Just Cupcakes is a well established bakery based in Dublin. The bakery specializes in high quality cupcakes and offers deliveries everywhere in Ireland. Customers can place orders on the website, register for an account to have access to a personalised profile page where they can review past orders and save their shipping information for future orders. Store employees can manage product creation, update and cancellation via the website. Additionally, there is a "Careers" section where the bakery's available job openings will be displayed. 
+
+The main purpose of the website is to promote online sales for the bakery, as Just Cupcakes is trying to grow their online presence. This is achieved by displaying the content to the site visitors in a clear, simple to read layout. The content and the services on offer by the company are clear. There are several calls to action on the website, encouraging users to check the different site pages for more information and to make purchases. There is a simple and fast checkout process, making it easy for potential customers to make a purchase. Also, the possibility to save the delivery information in the profile page is a nice addition so that customers can have a faster checkout experience on future orders, possibly encouraging customers to make more purchases.
 
 ## UX
 ---
@@ -12,12 +14,12 @@ Just Cupcakes is a well established bakery based in Dublin. The bakery specializ
 ### The ideal client for this website: 
 
 - Is based in Ireland.
-- Businesses or individuals who are looking for cupcakes deliveries.
+- Individuals who are looking for cupcakes deliveries.
 
 ### Visitors to this website are searching for: 
 
 - A bakery located in Dublin.
-- A bakery that offers online purchases and deliveries in Ireland. 
+- A bakery that offers online sales and deliveries in Ireland. 
 - A bakery that specializes in cupcakes.  
 
 ### User stories
@@ -162,6 +164,7 @@ The application page includes a form that will allow users to enter their inform
 
 ### Features to Implement in future
 
+- I want to update the checkout form and the edit profile form: currently the company offers deliveries in ireland, I want to limit the dropdown menu for the country to include Ireland only. 
 - Funcionality to handle the stock availability for order fulfillment.
 - An option for in-store pickups, so that the customer can place the order online and go to the bakery to pick it up, also avoiding elivery costs. 
 - More options in the Management section of the website, allowing store employees to also create new categories, create job posting and access job applications.
@@ -170,6 +173,15 @@ The application page includes a form that will allow users to enter their inform
 ## E-commerce business model 
 
 Just Cupcakes is a business to customer (b2c) eCommerce application. While businesses could also make purchases, the website is intended for individual customers who will create single orders. The items sold (deliverables) are products, which the customer can purchase online, via single payment, and have delivered at their location.
+
+## Marketing Strategy
+
+The marketing strategy taken to promote online sales and grow the company's presence online consisted in the following: 
+
+- Social media presence: the bakery has created a [Facebook page](readme-testing-images/facebook-page.pdf) where they post news and pictures of their cupcakes encouraging visitors to check their website.
+- Clear and relevant content, which is easy to understand and displayed in a simple layout. The website visitors are not presented with too much information that could result in causing distraction and lack of interest. 
+- Keyword research: added specific keywords to the website html, via meta tags. I have researched online and added a mix of long tail and short tail keywords that I think could improve the site SEO. 
+- Email campaigns via Mailchimp: the bakery will promote their services and inform potential customers about discounts, new producs, etc, via email. A newsletter form has been added to the home page of the website so that users can subscribe to the company's newsletter.
 
 ## Technologies Used
 
